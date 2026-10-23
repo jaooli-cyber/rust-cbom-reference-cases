@@ -1,0 +1,15 @@
+{
+  "frozenAtUtc": "2026-10-23T11:29:14Z",
+  "originalExchangeZipSha256": "d3acc8bcf5ef060ed67c65c30aea98d64fd8258447616b4b3b313bbc8599c47c",
+  "referenceVersion": "1.0.0",
+  "sourceRevisions": {
+    "hkdf": "1ac16e8b9d4ee7a67613c9396c6cc1327652eaba",
+    "jwt-cli": "47d0897ae6465d175fbe10eb554a85466e884c1a"
+  },
+  "timestampScope": "Recorded freeze metadata, not an independent timestamp attestation",
+  "unchangedPublishedFiles": {
+    "hkdf.reference.v1.cdx.json": "536a3d58278d2db3ee05299d6004134634ebe0c6b8ef73445e42bc12c9cb43ef",
+    "jwt-cli.reference.v1.cdx.json": "f1cf2232bed9d2cc5d7aad08c5f286d9c0237cb1628903f406a8c7cdc9c99278",
+    "reference-labels.v1.json": "b088bb7a78b6f689758b63d08724f24118c4ff07d395b0d6b905a2ceb07b79f4"
+  }
+}

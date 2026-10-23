@@ -1,0 +1,422 @@
+{
+  "bomFormat": "CycloneDX",
+  "components": [
+    {
+      "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:asset:CALLER-HASH",
+      "cryptoProperties": {
+        "algorithmProperties": {
+          "primitive": "hash"
+        },
+        "assetType": "algorithm"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "additionalContext": "{\"classification\":\"CALLER_SELECTED_HASH_OPERATION\",\"condition\":\"Input key is longer than the generic digest block size\",\"kind\":\"CLASSIFIED_SOURCE_SITE\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[\"H-EXTRACT-SETUP\",\"H-PRK-SETUP\"],\"recordId\":\"HD-LONG-KEY-HASH\",\"runtimeObserved\":false,\"sourcePackage\":\"hmac@0.12.1\",\"sourceSha256\":\"66ba692fd324d2b9d0fbb55ab96e978a2a72cc3bae7fc9efb14bba5534e79a16\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:b9e11eb410fdeb173eed911a",
+            "line": 117,
+            "location": "hmac@0.12.1/src/lib.rs",
+            "offset": 19,
+            "symbol": "HD-LONG-KEY-HASH"
+          }
+        ]
+      },
+      "name": "Caller-selected hash",
+      "properties": [
+        {
+          "name": "bom-fidelity:reference:identityStatus",
+          "value": "EXPLICIT_UNRESOLVED_IDENTITY_NOT_A_REGISTERED_ALGORITHM_NAME"
+        },
+        {
+          "name": "bom-fidelity:reference:runtimeObserved",
+          "value": "false"
+        },
+        {
+          "name": "bom-fidelity:reference:parameter:hashAlgorithm",
+          "value": "CALLER_SELECTED"
+        },
+        {
+          "name": "bom-fidelity:reference:parameter:outputBytes",
+          "value": "CALLER_DEPENDENT"
+        }
+      ],
+      "type": "cryptographic-asset"
+    },
+    {
+      "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:asset:HKDF",
+      "cryptoProperties": {
+        "algorithmProperties": {
+          "algorithmFamily": "HKDF",
+          "primitive": "kdf"
+        },
+        "assetType": "algorithm"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "additionalContext": "{\"classification\":\"KDF_EXPAND_DELEGATION\",\"condition\":\"Static public entry or conditional source path; not observed execution\",\"kind\":\"CLASSIFIED_SOURCE_SITE\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[\"H-R08\"],\"recordId\":\"H-EXPAND-DELEGATE\",\"runtimeObserved\":false,\"sourcePackage\":\"hkdf@0.12.4\",\"sourceSha256\":\"f0a1d6b58091b9690c168c8d772838c74f8c6937698af9fd81d2374a810bb07e\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:18c5da787d457352134bea81",
+            "line": 270,
+            "location": "hkdf@0.12.4/src/lib.rs",
+            "offset": 8,
+            "symbol": "H-EXPAND-DELEGATE"
+          },
+          {
+            "additionalContext": "{\"classification\":\"KDF_EXTRACT_DELEGATION\",\"condition\":\"Static public entry or conditional source path; not observed execution\",\"kind\":\"CLASSIFIED_SOURCE_SITE\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[\"H-R04\"],\"recordId\":\"H-NEW-EXTRACT\",\"runtimeObserved\":false,\"sourcePackage\":\"hkdf@0.12.4\",\"sourceSha256\":\"f0a1d6b58091b9690c168c8d772838c74f8c6937698af9fd81d2374a810bb07e\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:beb82ee703bfad1ea4ed13e9",
+            "line": 200,
+            "location": "hkdf@0.12.4/src/lib.rs",
+            "offset": 24,
+            "symbol": "H-NEW-EXTRACT"
+          }
+        ]
+      },
+      "name": "HKDF",
+      "properties": [
+        {
+          "name": "bom-fidelity:reference:identityStatus",
+          "value": "REGISTERED_FAMILY_ONLY_CALLER_PARAMETERS_OPEN"
+        },
+        {
+          "name": "bom-fidelity:reference:runtimeObserved",
+          "value": "false"
+        },
+        {
+          "name": "bom-fidelity:reference:parameter:counterBytes",
+          "value": "1"
+        },
+        {
+          "name": "bom-fidelity:reference:parameter:hashAlgorithm",
+          "value": "CALLER_SELECTED"
+        },
+        {
+          "name": "bom-fidelity:reference:parameter:maxOutputBytes",
+          "value": "255 * HashLen"
+        },
+        {
+          "name": "bom-fidelity:reference:parameter:outputBytes",
+          "value": "CALLER_DEPENDENT"
+        },
+        {
+          "name": "bom-fidelity:reference:parameter:saltDefault",
+          "value": "HashLen ZERO_BYTES"
+        }
+      ],
+      "type": "cryptographic-asset"
+    },
+    {
+      "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:asset:HMAC",
+      "cryptoProperties": {
+        "algorithmProperties": {
+          "algorithmFamily": "HMAC",
+          "primitive": "mac"
+        },
+        "assetType": "algorithm"
+      },
+      "evidence": {
+        "occurrences": [
+          {
+            "additionalContext": "{\"classification\":\"MAC_FINALIZE_OPERATION\",\"condition\":\"Static public entry or conditional source path; not observed execution\",\"kind\":\"CLASSIFIED_SOURCE_SITE\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[\"H-T05\",\"H-EXTRACT-FINALIZE\",\"H-EXPAND-FINALIZE\"],\"recordId\":\"H-I-simple-5\",\"runtimeObserved\":false,\"sourcePackage\":\"hkdf@0.12.4\",\"sourceSha256\":\"4d4a88eb1b4467a64f937a59e97619d8144a2b5f705cd5edf7f40cde77f6be2f\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:0cb88cc193de5e5e3acf26bc",
+            "line": 95,
+            "location": "hkdf@0.12.4/src/sealed.rs",
+            "offset": 39,
+            "symbol": "H-I-simple-5"
+          },
+          {
+            "additionalContext": "{\"classification\":\"MAC_INPUT_OPERATION\",\"condition\":\"Valid nonempty output and at least one info component\",\"kind\":\"CLASSIFIED_SOURCE_SITE\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[\"H-R07\",\"H-R08\"],\"recordId\":\"H-EXPAND-INFO\",\"runtimeObserved\":false,\"sourcePackage\":\"hkdf@0.12.4\",\"sourceSha256\":\"f0a1d6b58091b9690c168c8d772838c74f8c6937698af9fd81d2374a810bb07e\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:11769a4ace1ee8e9e7b2e639",
+            "line": 250,
+            "location": "hkdf@0.12.4/src/lib.rs",
+            "offset": 16,
+            "symbol": "H-EXPAND-INFO"
+          },
+          {
+            "additionalContext": "{\"classification\":\"KEY_PREPARATION\",\"condition\":\"Static public entry or conditional source path; not observed execution\",\"kind\":\"CLASSIFIED_SOURCE_SITE\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[\"H-T02\",\"H-PRK-SETUP\"],\"recordId\":\"H-I-simple-2\",\"runtimeObserved\":false,\"sourcePackage\":\"hkdf@0.12.4\",\"sourceSha256\":\"4d4a88eb1b4467a64f937a59e97619d8144a2b5f705cd5edf7f40cde77f6be2f\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:117845cf95e155f7ea69a545",
+            "line": 78,
+            "location": "hkdf@0.12.4/src/sealed.rs",
+            "offset": 8,
+            "symbol": "H-I-simple-2"
+          },
+          {
+            "additionalContext": "{\"classification\":\"KEY_PREPARATION\",\"condition\":\"Static public entry or conditional source path; not observed execution\",\"kind\":\"CLASSIFIED_SOURCE_SITE\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[\"H-T01\",\"H-EXTRACT-SETUP\"],\"recordId\":\"H-I-optimized-1\",\"runtimeObserved\":false,\"sourcePackage\":\"hkdf@0.12.4\",\"sourceSha256\":\"4d4a88eb1b4467a64f937a59e97619d8144a2b5f705cd5edf7f40cde77f6be2f\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:1410c9b714a90b862e6c0897",
+            "line": 42,
+            "location": "hkdf@0.12.4/src/sealed.rs",
+            "offset": 8,
+            "symbol": "H-I-optimized-1"
+          },
+          {
+            "additionalContext": "{\"classification\":\"HMAC_KEY_PREPARATION_AND_PAD_HASH_INPUT\",\"condition\":\"Static public entry or conditional source path; not observed execution\",\"kind\":\"PUBLIC_ENTRY_DECLARATION_OR_IMPLEMENTATION\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[],\"recordId\":\"G-23f610bc814308b9859a\",\"runtimeObserved\":false,\"sourcePackage\":\"hmac@0.12.1\",\"sourceSha256\":\"3c16b46effd4980cd2e98b5b2090aa57049dc9d4a9ea1c87e758875bf1ab0b63\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:2aadc66e98aab173ae473daf",
+            "line": 152,
+            "location": "hmac@0.12.1/src/optim.rs",
+            "offset": 4,
+            "symbol": "hmac@0.12.1:src/optim.rs:152:new_from_slice"
+          },
+          {
+            "additionalContext": "{\"classification\":\"KEY_PREPARATION\",\"condition\":\"Static public entry or conditional source path; not observed execution\",\"kind\":\"CLASSIFIED_SOURCE_SITE\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[\"H-T01\",\"H-EXTRACT-SETUP\"],\"recordId\":\"H-I-simple-1\",\"runtimeObserved\":false,\"sourcePackage\":\"hkdf@0.12.4\",\"sourceSha256\":\"4d4a88eb1b4467a64f937a59e97619d8144a2b5f705cd5edf7f40cde77f6be2f\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:2d7d756b86eef5cd9a23e46a",
+            "line": 73,
+            "location": "hkdf@0.12.4/src/sealed.rs",
+            "offset": 8,
+            "symbol": "H-I-simple-1"
+          },
+          {
+            "additionalContext": "{\"classification\":\"HMAC_KEY_PREPARATION_AND_PAD_HASH_INPUT\",\"condition\":\"Static public entry or conditional source path; not observed execution\",\"kind\":\"PUBLIC_ENTRY_DECLARATION_OR_IMPLEMENTATION\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[],\"recordId\":\"G-e585c1681aba7ee2695b\",\"runtimeObserved\":false,\"sourcePackage\":\"hmac@0.12.1\",\"sourceSha256\":\"160abf6a160f606185d18ac15984b7e0eb6662f43588539d9533b7cb1b016cca\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:30b76bc269bdcef8b9916f6e",
+            "line": 28,
+            "location": "hmac@0.12.1/src/simple.rs",
+            "offset": 4,
+            "symbol": "hmac@0.12.1:src/simple.rs:28:new"
+          },
+          {
+            "additionalContext": "{\"classification\":\"HMAC_INPUT\",\"condition\":\"Static public entry or conditional source path; not observed execution\",\"kind\":\"PUBLIC_ENTRY_DECLARATION_OR_IMPLEMENTATION\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[],\"recordId\":\"G-936528e8127e967a1c56\",\"runtimeObserved\":false,\"sourcePackage\":\"hmac@0.12.1\",\"sourceSha256\":\"3c16b46effd4980cd2e98b5b2090aa57049dc9d4a9ea1c87e758875bf1ab0b63\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:351f527a484bf06140ec694a",
+            "line": 189,
+            "location": "hmac@0.12.1/src/optim.rs",
+            "offset": 4,
+            "symbol": "hmac@0.12.1:src/optim.rs:189:update_blocks"
+          },
+          {
+            "additionalContext": "{\"classification\":\"MAC_FINALIZE_OPERATION\",\"condition\":\"Positive HashLen and valid nonempty output; repeated per output block\",\"kind\":\"CLASSIFIED_SOURCE_SITE\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[\"H-R07\",\"H-R08\"],\"recordId\":\"H-EXPAND-FINALIZE\",\"runtimeObserved\":false,\"sourcePackage\":\"hkdf@0.12.4\",\"sourceSha256\":\"f0a1d6b58091b9690c168c8d772838c74f8c6937698af9fd81d2374a810bb07e\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:3621a368a4b7ad3564ed6477",
+            "line": 255,
+            "location": "hkdf@0.12.4/src/lib.rs",
+            "offset": 25,
+            "symbol": "H-EXPAND-FINALIZE"
+          },
+          {
+            "additionalContext": "{\"classification\":\"HMAC_KEY_PREPARATION_AND_PAD_HASH_INPUT\",\"condition\":\"Static public entry or conditional source path; not observed execution\",\"kind\":\"PUBLIC_ENTRY_DECLARATION_OR_IMPLEMENTATION\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[],\"recordId\":\"G-158648ffac97cfdb4f4e\",\"runtimeObserved\":false,\"sourcePackage\":\"hmac@0.12.1\",\"sourceSha256\":\"160abf6a160f606185d18ac15984b7e0eb6662f43588539d9533b7cb1b016cca\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:399504e2aa933bef89da86f1",
+            "line": 33,
+            "location": "hmac@0.12.1/src/simple.rs",
+            "offset": 4,
+            "symbol": "hmac@0.12.1:src/simple.rs:33:new_from_slice"
+          },
+          {
+            "additionalContext": "{\"classification\":\"HMAC_KEY_PREPARATION_AND_PAD_HASH_INPUT\",\"condition\":\"Static public entry or conditional source path; not observed execution\",\"kind\":\"PUBLIC_ENTRY_DECLARATION_OR_IMPLEMENTATION\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[],\"recordId\":\"G-fa40ce89f9a7a3fdb224\",\"runtimeObserved\":false,\"sourcePackage\":\"hmac@0.12.1\",\"sourceSha256\":\"3c16b46effd4980cd2e98b5b2090aa57049dc9d4a9ea1c87e758875bf1ab0b63\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:431e806aba2b4a2ecb59a740",
+            "line": 147,
+            "location": "hmac@0.12.1/src/optim.rs",
+            "offset": 4,
+            "symbol": "hmac@0.12.1:src/optim.rs:147:new"
+          },
+          {
+            "additionalContext": "{\"classification\":\"KEY_PREPARATION\",\"condition\":\"Static public entry or conditional source path; not observed execution\",\"kind\":\"CLASSIFIED_SOURCE_SITE\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[\"H-T02\",\"H-PRK-SETUP\"],\"recordId\":\"H-I-optimized-2\",\"runtimeObserved\":false,\"sourcePackage\":\"hkdf@0.12.4\",\"sourceSha256\":\"4d4a88eb1b4467a64f937a59e97619d8144a2b5f705cd5edf7f40cde77f6be2f\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:66bb79dfdf058fbef3e4e13b",
+            "line": 47,
+            "location": "hkdf@0.12.4/src/sealed.rs",
+            "offset": 8,
+            "symbol": "H-I-optimized-2"
+          },
+          {
+            "additionalContext": "{\"classification\":\"HMAC_INPUT\",\"condition\":\"Static public entry or conditional source path; not observed execution\",\"kind\":\"PUBLIC_ENTRY_DECLARATION_OR_IMPLEMENTATION\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[],\"recordId\":\"G-b1ffebee1a2eea100709\",\"runtimeObserved\":false,\"sourcePackage\":\"hmac@0.12.1\",\"sourceSha256\":\"160abf6a160f606185d18ac15984b7e0eb6662f43588539d9533b7cb1b016cca\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:6c6c2b9daad3c4355e365254",
+            "line": 58,
+            "location": "hmac@0.12.1/src/simple.rs",
+            "offset": 4,
+            "symbol": "hmac@0.12.1:src/simple.rs:58:update"
+          },
+          {
+            "additionalContext": "{\"classification\":\"MAC_INPUT_OPERATION\",\"condition\":\"Static public entry or conditional source path; not observed execution\",\"kind\":\"CLASSIFIED_SOURCE_SITE\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[\"H-T04\",\"H-EXTRACT-UPDATE\",\"H-EXPAND-PREVIOUS\",\"H-EXPAND-INFO\",\"H-EXPAND-COUNTER\"],\"recordId\":\"H-I-optimized-4\",\"runtimeObserved\":false,\"sourcePackage\":\"hkdf@0.12.4\",\"sourceSha256\":\"4d4a88eb1b4467a64f937a59e97619d8144a2b5f705cd5edf7f40cde77f6be2f\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:7ab460a6effc8cd186561714",
+            "line": 57,
+            "location": "hkdf@0.12.4/src/sealed.rs",
+            "offset": 8,
+            "symbol": "H-I-optimized-4"
+          },
+          {
+            "additionalContext": "{\"classification\":\"SETUP_WITH_POSSIBLE_HASH_PREPROCESSING\",\"condition\":\"Hash preprocessing possible for a salt longer than digest block size\",\"kind\":\"CLASSIFIED_SOURCE_SITE\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[\"H-R01\",\"H-R04\",\"H-R06\"],\"recordId\":\"H-EXTRACT-SETUP\",\"runtimeObserved\":false,\"sourcePackage\":\"hkdf@0.12.4\",\"sourceSha256\":\"f0a1d6b58091b9690c168c8d772838c74f8c6937698af9fd81d2374a810bb07e\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:7cf07193527bf13dca4f2277",
+            "line": 154,
+            "location": "hkdf@0.12.4/src/lib.rs",
+            "offset": 18,
+            "symbol": "H-EXTRACT-SETUP"
+          },
+          {
+            "additionalContext": "{\"classification\":\"MAC_INPUT_OPERATION\",\"condition\":\"Valid nonempty output and a previous output block exists\",\"kind\":\"CLASSIFIED_SOURCE_SITE\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[\"H-R07\",\"H-R08\"],\"recordId\":\"H-EXPAND-PREVIOUS\",\"runtimeObserved\":false,\"sourcePackage\":\"hkdf@0.12.4\",\"sourceSha256\":\"f0a1d6b58091b9690c168c8d772838c74f8c6937698af9fd81d2374a810bb07e\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:8a80f26ebe39f0e5716b54b7",
+            "line": 244,
+            "location": "hkdf@0.12.4/src/lib.rs",
+            "offset": 16,
+            "symbol": "H-EXPAND-PREVIOUS"
+          },
+          {
+            "additionalContext": "{\"classification\":\"MAC_INPUT_OPERATION\",\"condition\":\"Static public entry or conditional source path; not observed execution\",\"kind\":\"CLASSIFIED_SOURCE_SITE\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[\"H-R07\",\"H-R08\"],\"recordId\":\"H-EXPAND-COUNTER\",\"runtimeObserved\":false,\"sourcePackage\":\"hkdf@0.12.4\",\"sourceSha256\":\"f0a1d6b58091b9690c168c8d772838c74f8c6937698af9fd81d2374a810bb07e\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:b570b823da7f5890d1b2b31a",
+            "line": 253,
+            "location": "hkdf@0.12.4/src/lib.rs",
+            "offset": 12,
+            "symbol": "H-EXPAND-COUNTER"
+          },
+          {
+            "additionalContext": "{\"classification\":\"MAC_FINALIZE_OPERATION\",\"condition\":\"Static public entry or conditional source path; not observed execution\",\"kind\":\"CLASSIFIED_SOURCE_SITE\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[\"H-T05\",\"H-EXTRACT-FINALIZE\",\"H-EXPAND-FINALIZE\"],\"recordId\":\"H-I-optimized-5\",\"runtimeObserved\":false,\"sourcePackage\":\"hkdf@0.12.4\",\"sourceSha256\":\"4d4a88eb1b4467a64f937a59e97619d8144a2b5f705cd5edf7f40cde77f6be2f\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:c9a323204d5851f4816a9a7a",
+            "line": 64,
+            "location": "hkdf@0.12.4/src/sealed.rs",
+            "offset": 39,
+            "symbol": "H-I-optimized-5"
+          },
+          {
+            "additionalContext": "{\"classification\":\"MAC_INPUT_OPERATION\",\"condition\":\"Static public entry or conditional source path; not observed execution\",\"kind\":\"CLASSIFIED_SOURCE_SITE\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[\"H-T04\",\"H-EXTRACT-UPDATE\",\"H-EXPAND-PREVIOUS\",\"H-EXPAND-INFO\",\"H-EXPAND-COUNTER\"],\"recordId\":\"H-I-simple-4\",\"runtimeObserved\":false,\"sourcePackage\":\"hkdf@0.12.4\",\"sourceSha256\":\"4d4a88eb1b4467a64f937a59e97619d8144a2b5f705cd5edf7f40cde77f6be2f\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:d3d2273cf5e887af50e5f06f",
+            "line": 88,
+            "location": "hkdf@0.12.4/src/sealed.rs",
+            "offset": 8,
+            "symbol": "H-I-simple-4"
+          },
+          {
+            "additionalContext": "{\"classification\":\"HMAC_FINALIZE\",\"condition\":\"Static public entry or conditional source path; not observed execution\",\"kind\":\"PUBLIC_ENTRY_DECLARATION_OR_IMPLEMENTATION\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[],\"recordId\":\"G-17da3a84855a59c229c7\",\"runtimeObserved\":false,\"sourcePackage\":\"hmac@0.12.1\",\"sourceSha256\":\"3c16b46effd4980cd2e98b5b2090aa57049dc9d4a9ea1c87e758875bf1ab0b63\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:e3cfa04e4af9294f3dcc6e9a",
+            "line": 207,
+            "location": "hmac@0.12.1/src/optim.rs",
+            "offset": 4,
+            "symbol": "hmac@0.12.1:src/optim.rs:207:finalize_fixed_core"
+          },
+          {
+            "additionalContext": "{\"classification\":\"MAC_FINALIZE_OPERATION\",\"condition\":\"Static public entry or conditional source path; not observed execution\",\"kind\":\"CLASSIFIED_SOURCE_SITE\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[\"H-R03\",\"H-R04\",\"H-R06\"],\"recordId\":\"H-EXTRACT-FINALIZE\",\"runtimeObserved\":false,\"sourcePackage\":\"hkdf@0.12.4\",\"sourceSha256\":\"f0a1d6b58091b9690c168c8d772838c74f8c6937698af9fd81d2374a810bb07e\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:e5c2f7dbf8fd33f1734df75c",
+            "line": 167,
+            "location": "hkdf@0.12.4/src/lib.rs",
+            "offset": 18,
+            "symbol": "H-EXTRACT-FINALIZE"
+          },
+          {
+            "additionalContext": "{\"classification\":\"HMAC_FINALIZE\",\"condition\":\"Static public entry or conditional source path; not observed execution\",\"kind\":\"PUBLIC_ENTRY_DECLARATION_OR_IMPLEMENTATION\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[],\"recordId\":\"G-ffc705d39c2c14b7f013\",\"runtimeObserved\":false,\"sourcePackage\":\"hmac@0.12.1\",\"sourceSha256\":\"160abf6a160f606185d18ac15984b7e0eb6662f43588539d9533b7cb1b016cca\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:ed51d6684fd51ca0b7401970",
+            "line": 68,
+            "location": "hmac@0.12.1/src/simple.rs",
+            "offset": 4,
+            "symbol": "hmac@0.12.1:src/simple.rs:68:finalize_into"
+          },
+          {
+            "additionalContext": "{\"classification\":\"MAC_INPUT_OPERATION\",\"condition\":\"Static public entry or conditional source path; not observed execution\",\"kind\":\"CLASSIFIED_SOURCE_SITE\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[\"H-R02\",\"H-R04\",\"H-R06\"],\"recordId\":\"H-EXTRACT-UPDATE\",\"runtimeObserved\":false,\"sourcePackage\":\"hkdf@0.12.4\",\"sourceSha256\":\"f0a1d6b58091b9690c168c8d772838c74f8c6937698af9fd81d2374a810bb07e\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:fedf152714b51c71cb36bb72",
+            "line": 161,
+            "location": "hkdf@0.12.4/src/lib.rs",
+            "offset": 8,
+            "symbol": "H-EXTRACT-UPDATE"
+          },
+          {
+            "additionalContext": "{\"classification\":\"SETUP_WITH_POSSIBLE_HASH_PREPROCESSING\",\"condition\":\"PRK length at least HashLen; long keys may require generic hashing\",\"kind\":\"CLASSIFIED_SOURCE_SITE\",\"offsetConvention\":\"ZERO_BASED_UNICODE_CHARACTERS_FROM_START_OF_LINE\",\"originIds\":[\"H-R05\",\"H-R03\",\"H-R04\",\"H-R06\"],\"recordId\":\"H-PRK-SETUP\",\"runtimeObserved\":false,\"sourcePackage\":\"hkdf@0.12.4\",\"sourceSha256\":\"f0a1d6b58091b9690c168c8d772838c74f8c6937698af9fd81d2374a810bb07e\"}",
+            "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:occ:ffecea165becc0fed045c567",
+            "line": 212,
+            "location": "hkdf@0.12.4/src/lib.rs",
+            "offset": 18,
+            "symbol": "H-PRK-SETUP"
+          }
+        ]
+      },
+      "name": "HMAC",
+      "properties": [
+        {
+          "name": "bom-fidelity:reference:identityStatus",
+          "value": "REGISTERED_FAMILY_ONLY_CALLER_PARAMETERS_OPEN"
+        },
+        {
+          "name": "bom-fidelity:reference:runtimeObserved",
+          "value": "false"
+        },
+        {
+          "name": "bom-fidelity:reference:parameter:hashAlgorithm",
+          "value": "CALLER_SELECTED"
+        },
+        {
+          "name": "bom-fidelity:reference:parameter:outputBytes",
+          "value": "CALLER_DEPENDENT"
+        }
+      ],
+      "type": "cryptographic-asset"
+    },
+    {
+      "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:provider:hmac@0.12.1",
+      "name": "hmac",
+      "properties": [
+        {
+          "name": "bom-fidelity:reference:role",
+          "value": "IMPLEMENTATION_PROVIDER_NOT_PROOF_OF_RUNTIME_USE"
+        }
+      ],
+      "purl": "pkg:cargo/hmac@0.12.1",
+      "type": "library",
+      "version": "0.12.1"
+    }
+  ],
+  "dependencies": [
+    {
+      "dependsOn": [
+        "urn:bom-fidelity:rust-round2:hkdf:asset:HMAC"
+      ],
+      "ref": "urn:bom-fidelity:rust-round2:hkdf:asset:HKDF"
+    },
+    {
+      "dependsOn": [
+        "urn:bom-fidelity:rust-round2:hkdf:asset:CALLER-HASH"
+      ],
+      "ref": "urn:bom-fidelity:rust-round2:hkdf:asset:HMAC"
+    },
+    {
+      "provides": [
+        "urn:bom-fidelity:rust-round2:hkdf:asset:HMAC"
+      ],
+      "ref": "urn:bom-fidelity:rust-round2:hkdf:provider:hmac@0.12.1"
+    },
+    {
+      "dependsOn": [
+        "urn:bom-fidelity:rust-round2:hkdf:asset:CALLER-HASH",
+        "urn:bom-fidelity:rust-round2:hkdf:asset:HKDF",
+        "urn:bom-fidelity:rust-round2:hkdf:asset:HMAC"
+      ],
+      "provides": [
+        "urn:bom-fidelity:rust-round2:hkdf:asset:HKDF"
+      ],
+      "ref": "urn:bom-fidelity:rust-round2:hkdf:root"
+    }
+  ],
+  "metadata": {
+    "component": {
+      "bom-ref": "urn:bom-fidelity:rust-round2:hkdf:root",
+      "name": "hkdf",
+      "type": "library",
+      "version": "0.12.4"
+    },
+    "properties": [
+      {
+        "name": "bom-fidelity:reference:status",
+        "value": "FROZEN_SOURCE_REFERENCE_V1"
+      },
+      {
+        "name": "bom-fidelity:reference:labelsSha256",
+        "value": "b088bb7a78b6f689758b63d08724f24118c4ff07d395b0d6b905a2ceb07b79f4"
+      },
+      {
+        "name": "bom-fidelity:reference:sourceDraftSha256",
+        "value": "194ead97ade6b3171eee27ee5fa9e162a921a15296479907e081dd3418cd5ccf"
+      },
+      {
+        "name": "bom-fidelity:reference:runtimeObserved",
+        "value": "false"
+      },
+      {
+        "name": "bom-fidelity:reference:scope",
+        "value": "SOURCE_EXPECTATIONS_NOT_COMPLETE_RUNTIME_INVENTORY"
+      },
+      {
+        "name": "bom-fidelity:reference:unresolvedPublicEntries",
+        "value": "PRESERVED_IN_COMPANION_LABELS_NOT_FABRICATED_CRYPTO_ASSETS"
+      },
+      {
+        "name": "bom-fidelity:reference:referenceVersion",
+        "value": "1.0.0"
+      },
+      {
+        "name": "bom-fidelity:reference:frozenAtUtc",
+        "value": "2026-10-23T11:29:14Z"
+      }
+    ]
+  },
+  "specVersion": "1.7",
+  "version": 1
+}

@@ -1,0 +1,12 @@
+--- a/src/lib.rs
++++ b/src/lib.rs
+@@ -197,8 +197,7 @@
+     /// pseudorandom key can be ignored and only HKDF-Expand operation is needed. This is the most
+     /// common constructor.
+     pub fn new(salt: Option<&[u8]>, ikm: &[u8]) -> Self {
+-        let (_, hkdf) = Self::extract(salt, ikm);
+-        hkdf
++        Self::from_prk(ikm).expect("control requires a sufficiently long PRK")
+     }
+ 
+     /// Create `Hkdf` from an already cryptographically strong pseudorandom key

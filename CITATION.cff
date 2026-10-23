@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite this versioned reference and review, rather than the moving default branch."
+title: "Rust CBOM source references and interoperability review"
+type: dataset
+authors:
+  - family-names: "Olivares"
+    given-names: "José Ángel"
+    affiliation: "BOM Fidelity / Global Trade Origin"
+version: 1.0.0
+date-released: 2026-10-23
+url: "https://github.com/jaooli-cyber/rust-cbom-reference-cases"
+repository-code: "https://github.com/jaooli-cyber/rust-cbom-reference-cases"
+license: Apache-2.0
+abstract: "Pinned Rust source labels, controlled variants and scoped CBOM review findings. Third-party sources retain their original licences."

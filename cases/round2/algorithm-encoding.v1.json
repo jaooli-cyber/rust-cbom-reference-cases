@@ -1,0 +1,283 @@
+{
+  "CALLER-HASH": {
+    "algorithmProperties": {
+      "primitive": "hash"
+    },
+    "name": "Caller-selected hash",
+    "parameters": {
+      "hashAlgorithm": "CALLER_SELECTED",
+      "outputBytes": "CALLER_DEPENDENT"
+    },
+    "provider": null,
+    "registryIdentity": "EXPLICIT_UNRESOLVED_IDENTITY_NOT_A_REGISTERED_ALGORITHM_NAME"
+  },
+  "ES256": {
+    "algorithmProperties": {
+      "algorithmFamily": "ECDSA",
+      "ellipticCurve": "nist/P-256",
+      "primitive": "signature"
+    },
+    "name": "ECDSA-nist/P-256-SHA-256",
+    "parameters": {
+      "curve": "P-256",
+      "digestOutputBytes": 32,
+      "hashAlgorithm": "SHA-256",
+      "keyBits": 256,
+      "signatureEncoding": "FIXED_R_CONCAT_S"
+    },
+    "provider": "ring@0.17.7",
+    "registryIdentity": "REGISTERED_FAMILY_AND_VARIANT"
+  },
+  "ES384": {
+    "algorithmProperties": {
+      "algorithmFamily": "ECDSA",
+      "ellipticCurve": "nist/P-384",
+      "primitive": "signature"
+    },
+    "name": "ECDSA-nist/P-384-SHA-384",
+    "parameters": {
+      "curve": "P-384",
+      "digestOutputBytes": 48,
+      "hashAlgorithm": "SHA-384",
+      "keyBits": 384,
+      "signatureEncoding": "FIXED_R_CONCAT_S"
+    },
+    "provider": "ring@0.17.7",
+    "registryIdentity": "REGISTERED_FAMILY_AND_VARIANT"
+  },
+  "EdDSA": {
+    "algorithmProperties": {
+      "algorithmFamily": "EdDSA",
+      "ellipticCurve": "other/Ed25519",
+      "primitive": "signature"
+    },
+    "name": "Ed25519",
+    "parameters": {
+      "digestOutputBytes": 64,
+      "hashAlgorithm": "SHA-512"
+    },
+    "provider": "ring@0.17.7",
+    "registryIdentity": "REGISTERED_FAMILY_AND_VARIANT"
+  },
+  "HKDF": {
+    "algorithmProperties": {
+      "algorithmFamily": "HKDF",
+      "primitive": "kdf"
+    },
+    "name": "HKDF",
+    "parameters": {
+      "counterBytes": 1,
+      "hashAlgorithm": "CALLER_SELECTED",
+      "maxOutputBytes": "255 * HashLen",
+      "outputBytes": "CALLER_DEPENDENT",
+      "saltDefault": "HashLen ZERO_BYTES"
+    },
+    "provider": "hkdf@0.12.4",
+    "registryIdentity": "REGISTERED_FAMILY_ONLY_CALLER_PARAMETERS_OPEN"
+  },
+  "HMAC": {
+    "algorithmProperties": {
+      "algorithmFamily": "HMAC",
+      "primitive": "mac"
+    },
+    "name": "HMAC",
+    "parameters": {
+      "hashAlgorithm": "CALLER_SELECTED",
+      "outputBytes": "CALLER_DEPENDENT"
+    },
+    "provider": "hmac@0.12.1",
+    "registryIdentity": "REGISTERED_FAMILY_ONLY_CALLER_PARAMETERS_OPEN"
+  },
+  "HS256": {
+    "algorithmProperties": {
+      "algorithmFamily": "HMAC",
+      "primitive": "mac"
+    },
+    "name": "HMAC-SHA-256",
+    "parameters": {
+      "digestOutputBytes": 32,
+      "hashAlgorithm": "SHA-256",
+      "keyBits": "CALLER_KEY_DEPENDENT",
+      "tagBytes": 32
+    },
+    "provider": "ring@0.17.7",
+    "registryIdentity": "REGISTERED_FAMILY_AND_VARIANT"
+  },
+  "HS384": {
+    "algorithmProperties": {
+      "algorithmFamily": "HMAC",
+      "primitive": "mac"
+    },
+    "name": "HMAC-SHA-384",
+    "parameters": {
+      "digestOutputBytes": 48,
+      "hashAlgorithm": "SHA-384",
+      "keyBits": "CALLER_KEY_DEPENDENT",
+      "tagBytes": 48
+    },
+    "provider": "ring@0.17.7",
+    "registryIdentity": "REGISTERED_FAMILY_AND_VARIANT"
+  },
+  "HS512": {
+    "algorithmProperties": {
+      "algorithmFamily": "HMAC",
+      "primitive": "mac"
+    },
+    "name": "HMAC-SHA-512",
+    "parameters": {
+      "digestOutputBytes": 64,
+      "hashAlgorithm": "SHA-512",
+      "keyBits": "CALLER_KEY_DEPENDENT",
+      "tagBytes": 64
+    },
+    "provider": "ring@0.17.7",
+    "registryIdentity": "REGISTERED_FAMILY_AND_VARIANT"
+  },
+  "OS-RANDOMNESS": {
+    "algorithmProperties": {
+      "primitive": "unknown"
+    },
+    "name": "Operating-system randomness",
+    "parameters": {
+      "algorithm": "OPERATING_SYSTEM_IMPLEMENTATION_UNRESOLVED",
+      "namedDrbgEstablished": false
+    },
+    "provider": null,
+    "registryIdentity": "EXPLICIT_UNRESOLVED_IDENTITY_NOT_A_REGISTERED_ALGORITHM_NAME"
+  },
+  "PS256": {
+    "algorithmProperties": {
+      "algorithmFamily": "RSASSA-PSS",
+      "primitive": "signature"
+    },
+    "name": "RSA-PSS-SHA-256",
+    "parameters": {
+      "digestOutputBytes": 32,
+      "hashAlgorithm": "SHA-256",
+      "keyBits": "CALLER_KEY_DEPENDENT",
+      "maskGeneration": "MGF1",
+      "maskHash": "SHA-256",
+      "saltBytes": 32
+    },
+    "provider": "ring@0.17.7",
+    "registryIdentity": "REGISTERED_FAMILY_AND_VARIANT"
+  },
+  "PS384": {
+    "algorithmProperties": {
+      "algorithmFamily": "RSASSA-PSS",
+      "primitive": "signature"
+    },
+    "name": "RSA-PSS-SHA-384",
+    "parameters": {
+      "digestOutputBytes": 48,
+      "hashAlgorithm": "SHA-384",
+      "keyBits": "CALLER_KEY_DEPENDENT",
+      "maskGeneration": "MGF1",
+      "maskHash": "SHA-384",
+      "saltBytes": 48
+    },
+    "provider": "ring@0.17.7",
+    "registryIdentity": "REGISTERED_FAMILY_AND_VARIANT"
+  },
+  "PS512": {
+    "algorithmProperties": {
+      "algorithmFamily": "RSASSA-PSS",
+      "primitive": "signature"
+    },
+    "name": "RSA-PSS-SHA-512",
+    "parameters": {
+      "digestOutputBytes": 64,
+      "hashAlgorithm": "SHA-512",
+      "keyBits": "CALLER_KEY_DEPENDENT",
+      "maskGeneration": "MGF1",
+      "maskHash": "SHA-512",
+      "saltBytes": 64
+    },
+    "provider": "ring@0.17.7",
+    "registryIdentity": "REGISTERED_FAMILY_AND_VARIANT"
+  },
+  "RS256": {
+    "algorithmProperties": {
+      "algorithmFamily": "RSASSA-PKCS1",
+      "padding": "pkcs1v15",
+      "primitive": "signature"
+    },
+    "name": "RSA-PKCS1-1.5-SHA-256",
+    "parameters": {
+      "digestOutputBytes": 32,
+      "hashAlgorithm": "SHA-256",
+      "keyBits": "CALLER_KEY_DEPENDENT"
+    },
+    "provider": "ring@0.17.7",
+    "registryIdentity": "REGISTERED_FAMILY_AND_VARIANT"
+  },
+  "RS384": {
+    "algorithmProperties": {
+      "algorithmFamily": "RSASSA-PKCS1",
+      "padding": "pkcs1v15",
+      "primitive": "signature"
+    },
+    "name": "RSA-PKCS1-1.5-SHA-384",
+    "parameters": {
+      "digestOutputBytes": 48,
+      "hashAlgorithm": "SHA-384",
+      "keyBits": "CALLER_KEY_DEPENDENT"
+    },
+    "provider": "ring@0.17.7",
+    "registryIdentity": "REGISTERED_FAMILY_AND_VARIANT"
+  },
+  "RS512": {
+    "algorithmProperties": {
+      "algorithmFamily": "RSASSA-PKCS1",
+      "padding": "pkcs1v15",
+      "primitive": "signature"
+    },
+    "name": "RSA-PKCS1-1.5-SHA-512",
+    "parameters": {
+      "digestOutputBytes": 64,
+      "hashAlgorithm": "SHA-512",
+      "keyBits": "CALLER_KEY_DEPENDENT"
+    },
+    "provider": "ring@0.17.7",
+    "registryIdentity": "REGISTERED_FAMILY_AND_VARIANT"
+  },
+  "SHA-256": {
+    "algorithmProperties": {
+      "algorithmFamily": "SHA-2",
+      "parameterSetIdentifier": "256",
+      "primitive": "hash"
+    },
+    "name": "SHA-256",
+    "parameters": {
+      "outputBytes": 32
+    },
+    "provider": "ring@0.17.7",
+    "registryIdentity": "REGISTERED_FAMILY_AND_VARIANT"
+  },
+  "SHA-384": {
+    "algorithmProperties": {
+      "algorithmFamily": "SHA-2",
+      "parameterSetIdentifier": "384",
+      "primitive": "hash"
+    },
+    "name": "SHA-384",
+    "parameters": {
+      "outputBytes": 48
+    },
+    "provider": "ring@0.17.7",
+    "registryIdentity": "REGISTERED_FAMILY_AND_VARIANT"
+  },
+  "SHA-512": {
+    "algorithmProperties": {
+      "algorithmFamily": "SHA-2",
+      "parameterSetIdentifier": "512",
+      "primitive": "hash"
+    },
+    "name": "SHA-512",
+    "parameters": {
+      "outputBytes": 64
+    },
+    "provider": "ring@0.17.7",
+    "registryIdentity": "REGISTERED_FAMILY_AND_VARIANT"
+  }
+}

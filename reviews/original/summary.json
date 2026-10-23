@@ -1,0 +1,63 @@
+{
+  "cases": {
+    "change-pbkdf2-rounds": {
+      "addedBlakeComponents": 2,
+      "parameters": {
+        "CORRECT": 6
+      },
+      "status": "PASS",
+      "unexpectedDifferences": 0
+    },
+    "initialization-only-application": {
+      "addedBlakeComponents": 0,
+      "parameters": {
+        "CORRECT": 2,
+        "NOT_APPLICABLE": 4
+      },
+      "status": "PASS",
+      "unexpectedDifferences": 0
+    },
+    "move-call-sites": {
+      "addedBlakeComponents": 2,
+      "parameters": {
+        "CORRECT": 6
+      },
+      "status": "PASS",
+      "unexpectedDifferences": 0
+    },
+    "original": {
+      "addedBlakeComponents": 2,
+      "parameters": {
+        "CORRECT": 6
+      },
+      "status": "PASS",
+      "unexpectedDifferences": 0
+    },
+    "remove-md5-operation": {
+      "addedBlakeComponents": 2,
+      "parameters": {
+        "CORRECT": 5,
+        "NOT_APPLICABLE": 1
+      },
+      "status": "PASS",
+      "unexpectedDifferences": 0
+    },
+    "replace-app-sha256-with-sha512": {
+      "addedBlakeComponents": 2,
+      "parameters": {
+        "CORRECT": 6
+      },
+      "status": "PASS",
+      "unexpectedDifferences": 0
+    }
+  },
+  "generatorExecuted": false,
+  "packageUsageChecks": 24,
+  "parameterTotals": {
+    "CORRECT": 31,
+    "NOT_APPLICABLE": 5
+  },
+  "referenceModified": false,
+  "scopeNote": "CONSTITUENTS_ATTACHED_TO_HASH_OPERATION_NOT_DEFAULT_INITIALIZATION",
+  "status": "PASS"
+}

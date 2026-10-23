@@ -1,0 +1,2326 @@
+{
+  "applicationCallSites": [
+    {
+      "algorithm": "SHA-256",
+      "classification": "OPERATION",
+      "crate": "sha2-0.10.9",
+      "function": "Sha256::digest",
+      "id": "A01",
+      "level": "APPLICATION",
+      "location": {
+        "anchor": "Sha256::digest(",
+        "column": 13,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 23,
+        "path": "src/main.rs",
+        "sourceSha256": "5d838be73a718ef6c6626532d4e5e9c1dcb061e523e1cd76b2cfe4b0fd1b3769"
+      },
+      "parameters": {
+        "outputBytes": 32
+      },
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "MD5",
+      "classification": "OPERATION",
+      "crate": "md5-0.7.0",
+      "function": "md5::compute",
+      "id": "A02",
+      "level": "APPLICATION",
+      "location": {
+        "anchor": "md5::compute(",
+        "column": 13,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 24,
+        "path": "src/main.rs",
+        "sourceSha256": "5d838be73a718ef6c6626532d4e5e9c1dcb061e523e1cd76b2cfe4b0fd1b3769"
+      },
+      "parameters": {
+        "outputBytes": 16
+      },
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "BLAKE3",
+      "classification": "OPERATION",
+      "crate": "blake3-1.8.5",
+      "function": "blake3::hash",
+      "id": "A03",
+      "level": "APPLICATION",
+      "location": {
+        "anchor": "blake3::hash(",
+        "column": 13,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 25,
+        "path": "src/main.rs",
+        "sourceSha256": "5d838be73a718ef6c6626532d4e5e9c1dcb061e523e1cd76b2cfe4b0fd1b3769"
+      },
+      "parameters": {
+        "mode": "unkeyed",
+        "outputBytes": 32
+      },
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "AES-256-GCM",
+      "classification": "INITIALIZATION",
+      "crate": "aes-gcm-0.10.3",
+      "function": "Aes256Gcm::new_from_slice",
+      "id": "A04",
+      "level": "APPLICATION",
+      "location": {
+        "anchor": "Aes256Gcm::new_from_slice(",
+        "column": 13,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 26,
+        "path": "src/main.rs",
+        "sourceSha256": "5d838be73a718ef6c6626532d4e5e9c1dcb061e523e1cd76b2cfe4b0fd1b3769"
+      },
+      "parameters": {
+        "keyBits": 256,
+        "nonceBits": 96,
+        "payloadEncryptionCalled": false,
+        "tagBits": 128
+      },
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "HMAC-SHA-256",
+      "classification": "INITIALIZATION",
+      "crate": "hmac-0.12.1",
+      "function": "Hmac::<Sha256>::new_from_slice",
+      "id": "A05",
+      "level": "APPLICATION",
+      "location": {
+        "anchor": "Hmac::<Sha256>::new_from_slice(",
+        "column": 13,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 27,
+        "path": "src/main.rs",
+        "sourceSha256": "5d838be73a718ef6c6626532d4e5e9c1dcb061e523e1cd76b2cfe4b0fd1b3769"
+      },
+      "parameters": {
+        "hash": "SHA-256",
+        "keyLength": "RUNTIME_DEPENDENT",
+        "messageMacCalled": false
+      },
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": null,
+      "classification": "INITIALIZATION",
+      "crate": "jsonwebtoken-9.3.1",
+      "function": "EncodingKey::from_secret",
+      "id": "A06",
+      "level": "APPLICATION",
+      "location": {
+        "anchor": "EncodingKey::from_secret(",
+        "column": 19,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 29,
+        "path": "src/main.rs",
+        "sourceSha256": "5d838be73a718ef6c6626532d4e5e9c1dcb061e523e1cd76b2cfe4b0fd1b3769"
+      },
+      "parameters": {
+        "digest": "NOT_SELECTED",
+        "family": "HMAC",
+        "signingCalled": false
+      },
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "PBKDF2-SHA-256",
+      "classification": "OPERATION",
+      "crate": "pbkdf2-0.12.2",
+      "function": "pbkdf2_hmac::<Sha256>",
+      "id": "A07",
+      "level": "APPLICATION",
+      "location": {
+        "anchor": "pbkdf2_hmac::<Sha256>(",
+        "column": 5,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 33,
+        "path": "src/main.rs",
+        "sourceSha256": "5d838be73a718ef6c6626532d4e5e9c1dcb061e523e1cd76b2cfe4b0fd1b3769"
+      },
+      "parameters": {
+        "derivedKeyBytes": 32,
+        "iterations": 1000,
+        "prf": "HMAC-SHA-256",
+        "saltBytes": 9
+      },
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": null,
+      "classification": "PREPARATION",
+      "crate": "password-hash-0.5.0",
+      "function": "SaltString::encode_b64",
+      "id": "A08",
+      "level": "APPLICATION",
+      "location": {
+        "anchor": "SaltString::encode_b64(",
+        "column": 20,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 35,
+        "path": "src/main.rs",
+        "sourceSha256": "5d838be73a718ef6c6626532d4e5e9c1dcb061e523e1cd76b2cfe4b0fd1b3769"
+      },
+      "parameters": {
+        "decodedSaltBytes": 16,
+        "encoding": "BASE64",
+        "rngCalled": false
+      },
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "Argon2id",
+      "classification": "INITIALIZATION",
+      "crate": "argon2-0.5.3",
+      "function": "Argon2::default",
+      "id": "A09",
+      "level": "APPLICATION",
+      "location": {
+        "anchor": "Argon2::default(",
+        "column": 13,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 36,
+        "path": "src/main.rs",
+        "sourceSha256": "5d838be73a718ef6c6626532d4e5e9c1dcb061e523e1cd76b2cfe4b0fd1b3769"
+      },
+      "parameters": {
+        "algorithm": "Argon2id",
+        "memoryKiB": 19456,
+        "outputBytes": 32,
+        "parallelism": 1,
+        "passes": 2,
+        "provenance": "PINNED_LIBRARY_DEFAULTS",
+        "version": 19
+      },
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "Argon2id",
+      "classification": "OPERATION",
+      "crate": "argon2-0.5.3",
+      "function": "hash_password",
+      "id": "A10",
+      "level": "APPLICATION",
+      "location": {
+        "anchor": "hash_password(",
+        "column": 31,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 36,
+        "path": "src/main.rs",
+        "sourceSha256": "5d838be73a718ef6c6626532d4e5e9c1dcb061e523e1cd76b2cfe4b0fd1b3769"
+      },
+      "parameters": {
+        "algorithm": "Argon2id",
+        "memoryKiB": 19456,
+        "outputBytes": 32,
+        "parallelism": 1,
+        "passes": 2,
+        "provenance": "APP_SALT_AND_PINNED_LIBRARY_DEFAULTS",
+        "saltBytes": 16,
+        "version": 19
+      },
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": null,
+      "classification": "CONFIGURATION",
+      "crate": "rustls-0.23.40",
+      "function": "ClientConfig::builder",
+      "id": "A11",
+      "level": "APPLICATION",
+      "location": {
+        "anchor": "ClientConfig::builder(",
+        "column": 13,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 38,
+        "path": "src/main.rs",
+        "sourceSha256": "5d838be73a718ef6c6626532d4e5e9c1dcb061e523e1cd76b2cfe4b0fd1b3769"
+      },
+      "parameters": {
+        "handshakeCalled": false,
+        "protocols": [
+          "TLS1.3",
+          "TLS1.2"
+        ],
+        "provider": "aws-lc-rs"
+      },
+      "runtimeObserved": false
+    }
+  ],
+  "configuredCandidates": [
+    {
+      "category": "CIPHER_SUITE",
+      "id": "C01",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 103,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "TLS13_AES_256_GCM_SHA384",
+      "runtimeObserved": false
+    },
+    {
+      "category": "CIPHER_SUITE",
+      "id": "C02",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 104,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "TLS13_AES_128_GCM_SHA256",
+      "runtimeObserved": false
+    },
+    {
+      "category": "CIPHER_SUITE",
+      "id": "C03",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 106,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "TLS13_CHACHA20_POLY1305_SHA256",
+      "runtimeObserved": false
+    },
+    {
+      "category": "CIPHER_SUITE",
+      "id": "C04",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 109,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
+      "runtimeObserved": false
+    },
+    {
+      "category": "CIPHER_SUITE",
+      "id": "C05",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 111,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+      "runtimeObserved": false
+    },
+    {
+      "category": "CIPHER_SUITE",
+      "id": "C06",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 113,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
+      "runtimeObserved": false
+    },
+    {
+      "category": "CIPHER_SUITE",
+      "id": "C07",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 115,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+      "runtimeObserved": false
+    },
+    {
+      "category": "CIPHER_SUITE",
+      "id": "C08",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 117,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+      "runtimeObserved": false
+    },
+    {
+      "category": "CIPHER_SUITE",
+      "id": "C09",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 119,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
+      "runtimeObserved": false
+    },
+    {
+      "category": "KEY_EXCHANGE_GROUP",
+      "id": "C10",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 249,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "X25519MLKEM768",
+      "runtimeObserved": false
+    },
+    {
+      "category": "KEY_EXCHANGE_GROUP",
+      "id": "C11",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 250,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "X25519",
+      "runtimeObserved": false
+    },
+    {
+      "category": "KEY_EXCHANGE_GROUP",
+      "id": "C12",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 251,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "SECP256R1",
+      "runtimeObserved": false
+    },
+    {
+      "category": "KEY_EXCHANGE_GROUP",
+      "id": "C13",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 252,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "SECP384R1",
+      "runtimeObserved": false
+    },
+    {
+      "category": "VERIFICATION_ALGORITHM",
+      "id": "C14",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 160,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "ECDSA_P256_SHA256",
+      "runtimeObserved": false
+    },
+    {
+      "category": "VERIFICATION_ALGORITHM",
+      "id": "C15",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 161,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "ECDSA_P256_SHA384",
+      "runtimeObserved": false
+    },
+    {
+      "category": "VERIFICATION_ALGORITHM",
+      "id": "C16",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 162,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "ECDSA_P256_SHA512",
+      "runtimeObserved": false
+    },
+    {
+      "category": "VERIFICATION_ALGORITHM",
+      "id": "C17",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 163,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "ECDSA_P384_SHA256",
+      "runtimeObserved": false
+    },
+    {
+      "category": "VERIFICATION_ALGORITHM",
+      "id": "C18",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 164,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "ECDSA_P384_SHA384",
+      "runtimeObserved": false
+    },
+    {
+      "category": "VERIFICATION_ALGORITHM",
+      "id": "C19",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 165,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "ECDSA_P384_SHA512",
+      "runtimeObserved": false
+    },
+    {
+      "category": "VERIFICATION_ALGORITHM",
+      "id": "C20",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 166,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "ECDSA_P521_SHA256",
+      "runtimeObserved": false
+    },
+    {
+      "category": "VERIFICATION_ALGORITHM",
+      "id": "C21",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 167,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "ECDSA_P521_SHA384",
+      "runtimeObserved": false
+    },
+    {
+      "category": "VERIFICATION_ALGORITHM",
+      "id": "C22",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 168,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "ECDSA_P521_SHA512",
+      "runtimeObserved": false
+    },
+    {
+      "category": "VERIFICATION_ALGORITHM",
+      "id": "C23",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 169,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "ED25519",
+      "runtimeObserved": false
+    },
+    {
+      "category": "VERIFICATION_ALGORITHM",
+      "id": "C24",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 170,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "RSA_PSS_2048_8192_SHA256_LEGACY_KEY",
+      "runtimeObserved": false
+    },
+    {
+      "category": "VERIFICATION_ALGORITHM",
+      "id": "C25",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 171,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "RSA_PSS_2048_8192_SHA384_LEGACY_KEY",
+      "runtimeObserved": false
+    },
+    {
+      "category": "VERIFICATION_ALGORITHM",
+      "id": "C26",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 172,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "RSA_PSS_2048_8192_SHA512_LEGACY_KEY",
+      "runtimeObserved": false
+    },
+    {
+      "category": "VERIFICATION_ALGORITHM",
+      "id": "C27",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 173,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "RSA_PKCS1_2048_8192_SHA256",
+      "runtimeObserved": false
+    },
+    {
+      "category": "VERIFICATION_ALGORITHM",
+      "id": "C28",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 174,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "RSA_PKCS1_2048_8192_SHA384",
+      "runtimeObserved": false
+    },
+    {
+      "category": "VERIFICATION_ALGORITHM",
+      "id": "C29",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 175,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "RSA_PKCS1_2048_8192_SHA512",
+      "runtimeObserved": false
+    },
+    {
+      "category": "VERIFICATION_ALGORITHM",
+      "id": "C30",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 176,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "RSA_PKCS1_2048_8192_SHA256_ABSENT_PARAMS",
+      "runtimeObserved": false
+    },
+    {
+      "category": "VERIFICATION_ALGORITHM",
+      "id": "C31",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 177,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "RSA_PKCS1_2048_8192_SHA384_ABSENT_PARAMS",
+      "runtimeObserved": false
+    },
+    {
+      "category": "VERIFICATION_ALGORITHM",
+      "id": "C32",
+      "level": "CONFIGURED_ONLY",
+      "location": {
+        "line": 178,
+        "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+        "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+      },
+      "nameConvention": "PROVIDER_IDENTIFIER_NOT_CANONICAL_ALGORITHM_NAME",
+      "operationCalled": false,
+      "origins": [
+        "A11"
+      ],
+      "providerIdentifier": "RSA_PKCS1_2048_8192_SHA512_ABSENT_PARAMS",
+      "runtimeObserved": false
+    }
+  ],
+  "dependencyInitializationSites": [
+    {
+      "classification": "INITIALIZATION",
+      "crate": "aes-0.8.4",
+      "function": "Aes256Enc::new",
+      "id": "I01",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "round_keys: unsafe { $module::expand_key(key.as_ref()) },",
+        "column": 21,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 164,
+        "path": "aes-0.8.4/src/ni.rs",
+        "sourceSha256": "15b9a67dbedc3b558ddec063489be4a6607e568afddd8345506be36952fc3bde"
+      },
+      "messageOperationCalled": false,
+      "nameConvention": "SOURCE_LIBRARY_IDENTIFIER",
+      "origins": [
+        "A04"
+      ],
+      "role": "EXPAND_ENCRYPTION_ROUND_KEYS",
+      "runtimeObserved": false,
+      "sourceAlgorithmIdentifier": "AES-256"
+    },
+    {
+      "classification": "INITIALIZATION",
+      "crate": "aes-0.8.4",
+      "function": "Aes256Dec::from",
+      "id": "I02",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "let round_keys = unsafe { $module::inv_expanded_keys(&enc.round_keys) };",
+        "column": 17,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 238,
+        "path": "aes-0.8.4/src/ni.rs",
+        "sourceSha256": "15b9a67dbedc3b558ddec063489be4a6607e568afddd8345506be36952fc3bde"
+      },
+      "messageOperationCalled": false,
+      "nameConvention": "SOURCE_LIBRARY_IDENTIFIER",
+      "origins": [
+        "A04"
+      ],
+      "role": "PREPARE_DECRYPTION_ROUND_KEYS_NOT_PAYLOAD_DECRYPT",
+      "runtimeObserved": false,
+      "sourceAlgorithmIdentifier": "AES-256"
+    },
+    {
+      "classification": "INITIALIZATION",
+      "crate": "aes-0.8.4",
+      "function": "Aes256::new",
+      "id": "I03",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "keys: $fixslice_key_schedule(key.as_ref()),",
+        "column": 21,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 66,
+        "path": "aes-0.8.4/src/soft.rs",
+        "sourceSha256": "3a84211717fdc86a2b0f0d9086f33410bee2ff9be480f50c981980f678a0c2a8"
+      },
+      "messageOperationCalled": false,
+      "nameConvention": "SOURCE_LIBRARY_IDENTIFIER",
+      "origins": [
+        "A04"
+      ],
+      "role": "EXPAND_SOFTWARE_ROUND_KEYS",
+      "runtimeObserved": false,
+      "sourceAlgorithmIdentifier": "AES-256"
+    },
+    {
+      "classification": "INITIALIZATION",
+      "crate": "aes-gcm-0.10.3",
+      "function": "AesGcm::from",
+      "id": "I04",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "let ghash = GHash::new(&ghash_key);",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 237,
+        "path": "aes-gcm-0.10.3/src/lib.rs",
+        "sourceSha256": "9261306cb6e8ce08a3559d69b2c301b9c0474234b3ff4b92e3e3c8cd7937f479"
+      },
+      "messageOperationCalled": false,
+      "nameConvention": "SOURCE_LIBRARY_IDENTIFIER",
+      "origins": [
+        "A04"
+      ],
+      "role": "INITIALIZE_AUTHENTICATOR_NOT_MESSAGE_MAC",
+      "runtimeObserved": false,
+      "sourceAlgorithmIdentifier": "GHASH"
+    },
+    {
+      "classification": "INITIALIZATION",
+      "crate": "ghash-0.5.1",
+      "function": "GHash::new_with_init_block",
+      "id": "I05",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "let mut h_polyval = polyval::mulx(&h);",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 72,
+        "path": "ghash-0.5.1/src/lib.rs",
+        "sourceSha256": "df449412b068a1d66fad81b814347980b04ea724e0642fb10a84b53806d6c302"
+      },
+      "messageOperationCalled": false,
+      "nameConvention": "SOURCE_LIBRARY_IDENTIFIER",
+      "origins": [
+        "A04"
+      ],
+      "role": "FIELD_KEY_CONVERSION_NOT_MESSAGE_MAC",
+      "runtimeObserved": false,
+      "sourceAlgorithmIdentifier": "POLYVAL"
+    },
+    {
+      "classification": "INITIALIZATION",
+      "crate": "ghash-0.5.1",
+      "function": "GHash::new_with_init_block",
+      "id": "I06",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "let result = GHash(Polyval::new_with_init_block(&h_polyval, init_block));",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 78,
+        "path": "ghash-0.5.1/src/lib.rs",
+        "sourceSha256": "df449412b068a1d66fad81b814347980b04ea724e0642fb10a84b53806d6c302"
+      },
+      "messageOperationCalled": false,
+      "nameConvention": "SOURCE_LIBRARY_IDENTIFIER",
+      "origins": [
+        "A04"
+      ],
+      "role": "INITIALIZE_HASH_STATE_NOT_MESSAGE_MAC",
+      "runtimeObserved": false,
+      "sourceAlgorithmIdentifier": "POLYVAL"
+    }
+  ],
+  "dependencyOperationSites": [
+    {
+      "algorithm": "AES-256",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "aes-gcm-0.10.3",
+      "function": "AesGcm::from",
+      "id": "D01",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "cipher.encrypt_block(&mut ghash_key);",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 235,
+        "path": "aes-gcm-0.10.3/src/lib.rs",
+        "sourceSha256": "9261306cb6e8ce08a3559d69b2c301b9c0474234b3ff4b92e3e3c8cd7937f479"
+      },
+      "origins": [
+        "A04"
+      ],
+      "parameters": {
+        "blockBits": 128,
+        "input": "ZERO_BLOCK",
+        "keyBits": 256,
+        "purpose": "GHASH_SUBKEY_DERIVATION"
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "BLOCK_ENCRYPT_FOR_GHASH_SUBKEY",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "SHA-256",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "hmac-0.12.1",
+      "function": "get_der_key",
+      "id": "D02",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "let hash = D::digest(key);",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 117,
+        "path": "hmac-0.12.1/src/lib.rs",
+        "sourceSha256": "66ba692fd324d2b9d0fbb55ab96e978a2a72cc3bae7fc9efb14bba5534e79a16"
+      },
+      "origins": [
+        "A05",
+        "A07"
+      ],
+      "parameters": {
+        "keyLength": "RUNTIME_DEPENDENT",
+        "keyLengthCondition": ">64_BYTES",
+        "outputBytes": 32
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "HASH_IF_KEY_EXCEEDS_64_BYTES",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "SHA-256",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "hmac-0.12.1",
+      "function": "HmacCore::new_from_slice",
+      "id": "D03",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "digest.update_blocks(slice::from_ref(&buf));",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 158,
+        "path": "hmac-0.12.1/src/optim.rs",
+        "sourceSha256": "3c16b46effd4980cd2e98b5b2090aa57049dc9d4a9ea1c87e758875bf1ab0b63"
+      },
+      "origins": [
+        "A05",
+        "A07"
+      ],
+      "parameters": {
+        "blockBytes": 64,
+        "padByte": 54,
+        "stateUpdateOnly": true
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "HASH_IPAD_BLOCK",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "SHA-256",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "hmac-0.12.1",
+      "function": "HmacCore::new_from_slice",
+      "id": "D04",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "opad_digest.update_blocks(slice::from_ref(&buf));",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 165,
+        "path": "hmac-0.12.1/src/optim.rs",
+        "sourceSha256": "3c16b46effd4980cd2e98b5b2090aa57049dc9d4a9ea1c87e758875bf1ab0b63"
+      },
+      "origins": [
+        "A05",
+        "A07"
+      ],
+      "parameters": {
+        "blockBytes": 64,
+        "padByte": 92,
+        "stateUpdateOnly": true
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "HASH_OPAD_BLOCK",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "HMAC-SHA-256",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "pbkdf2-0.12.2",
+      "function": "pbkdf2_body",
+      "id": "D05",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "let salt = prfc.finalize_fixed();",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 136,
+        "path": "pbkdf2-0.12.2/src/lib.rs",
+        "sourceSha256": "4c04c9b4daaafe69da4830982e96faa789078e267f05b963220638d2f6182fae"
+      },
+      "origins": [
+        "A07"
+      ],
+      "parameters": {
+        "blockIndex": 1,
+        "iterationIndex": 1,
+        "prfOutputBytes": 32,
+        "saltBytes": 9
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "PRF_U1",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "HMAC-SHA-256",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "pbkdf2-0.12.2",
+      "function": "pbkdf2_body",
+      "id": "D06",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "salt = prfc.finalize_fixed();",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 144,
+        "path": "pbkdf2-0.12.2/src/lib.rs",
+        "sourceSha256": "4c04c9b4daaafe69da4830982e96faa789078e267f05b963220638d2f6182fae"
+      },
+      "origins": [
+        "A07"
+      ],
+      "parameters": {
+        "inputBytes": 32,
+        "iterationIndexRange": [
+          2,
+          1000
+        ],
+        "prfOutputBytes": 32
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "PRF_U2_THROUGH_U1000",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "SHA-256",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "hmac-0.12.1",
+      "function": "HmacCore::update_blocks",
+      "id": "D07",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "self.digest.update_blocks(blocks);",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 190,
+        "path": "hmac-0.12.1/src/optim.rs",
+        "sourceSha256": "3c16b46effd4980cd2e98b5b2090aa57049dc9d4a9ea1c87e758875bf1ab0b63"
+      },
+      "origins": [
+        "A07"
+      ],
+      "parameters": {
+        "blockBytes": 64,
+        "stateUpdateOnly": true
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "HASH_MESSAGE_BLOCKS",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "SHA-256",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "hmac-0.12.1",
+      "function": "HmacCore::finalize_fixed_core",
+      "id": "D08",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "self.digest.finalize_fixed_core(buffer, &mut hash);",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 209,
+        "path": "hmac-0.12.1/src/optim.rs",
+        "sourceSha256": "3c16b46effd4980cd2e98b5b2090aa57049dc9d4a9ea1c87e758875bf1ab0b63"
+      },
+      "origins": [
+        "A07"
+      ],
+      "parameters": {
+        "outputBytes": 32
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "INNER_HASH_FINALIZE",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "SHA-256",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "hmac-0.12.1",
+      "function": "HmacCore::finalize_fixed_core",
+      "id": "D09",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "buffer.digest_blocks(&hash, |b| h.update_blocks(b));",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 217,
+        "path": "hmac-0.12.1/src/optim.rs",
+        "sourceSha256": "3c16b46effd4980cd2e98b5b2090aa57049dc9d4a9ea1c87e758875bf1ab0b63"
+      },
+      "origins": [
+        "A07"
+      ],
+      "parameters": {
+        "inputBytes": 32,
+        "stateUpdateOnly": true
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "OUTER_HASH_UPDATE",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "SHA-256",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "hmac-0.12.1",
+      "function": "HmacCore::finalize_fixed_core",
+      "id": "D10",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "h.finalize_fixed_core(buffer, out);",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 218,
+        "path": "hmac-0.12.1/src/optim.rs",
+        "sourceSha256": "3c16b46effd4980cd2e98b5b2090aa57049dc9d4a9ea1c87e758875bf1ab0b63"
+      },
+      "origins": [
+        "A07"
+      ],
+      "parameters": {
+        "outputBytes": 32
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "OUTER_HASH_FINALIZE",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "SHA-256",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "sha2-0.10.9",
+      "function": "Sha256VarCore::update_blocks",
+      "id": "D11",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "compress256(&mut self.state, blocks);",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 37,
+        "path": "sha2-0.10.9/src/core_api.rs",
+        "sourceSha256": "73b160d98bfa6737688875ad73da5e3c2c93582604dc313d208200e12fdab676"
+      },
+      "origins": [
+        "A01",
+        "A05",
+        "A07"
+      ],
+      "parameters": {
+        "blockBytes": 64,
+        "stateUpdateOnly": true
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "COMPRESSION",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "SHA-256",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "sha2-0.10.9",
+      "function": "Sha256VarCore::finalize_variable_core",
+      "id": "D12",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "buffer.len64_padding_be(bit_len, |b| compress256(&mut self.state, from_ref(b)));",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 63,
+        "path": "sha2-0.10.9/src/core_api.rs",
+        "sourceSha256": "73b160d98bfa6737688875ad73da5e3c2c93582604dc313d208200e12fdab676"
+      },
+      "origins": [
+        "A01",
+        "A07",
+        "A05"
+      ],
+      "parameters": {
+        "outputBytes": 32
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "PAD_AND_COMPRESS",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "MD5",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "md5-0.7.0",
+      "function": "consume",
+      "id": "D13",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "transform(state, &input);",
+        "column": 13,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 223,
+        "path": "md5-0.7.0/src/lib.rs",
+        "sourceSha256": "a7527a7bef355ef3c928cdf1de99ac4e20df7d57d23c0ddb1aadc2ddbec23f89"
+      },
+      "origins": [
+        "A02"
+      ],
+      "parameters": {
+        "blockBytes": 64,
+        "stateUpdateOnly": true
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "COMPRESSION",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "MD5",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "md5-0.7.0",
+      "function": "Context::compute",
+      "id": "D14",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "transform(&mut self.state, &input);",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 152,
+        "path": "md5-0.7.0/src/lib.rs",
+        "sourceSha256": "a7527a7bef355ef3c928cdf1de99ac4e20df7d57d23c0ddb1aadc2ddbec23f89"
+      },
+      "origins": [
+        "A02"
+      ],
+      "parameters": {
+        "outputBytes": 16
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "FINAL_COMPRESSION",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "BLAKE3",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "blake3-1.8.5",
+      "function": "hash",
+      "id": "D15",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "hash_all_at_once::<join::SerialJoin>(input, IV, 0).root_hash()",
+        "column": 5,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 921,
+        "path": "blake3-1.8.5/src/lib.rs",
+        "sourceSha256": "537bcb7d3f11d440f9c5b88512b538d8582e881b98630ce71cf481f9a7d4ff1c"
+      },
+      "origins": [
+        "A03"
+      ],
+      "parameters": {
+        "mode": "unkeyed",
+        "outputBytes": 32
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "HASH_32_BYTE_OUTPUT",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "BLAKE2b-512",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "argon2-0.5.3",
+      "function": "Argon2::initial_hash",
+      "id": "D16",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "digest.finalize()",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 545,
+        "path": "argon2-0.5.3/src/lib.rs",
+        "sourceSha256": "c1ed703c605d55d4b82f807a891bb3eb9d79e061bf129ac5637ab41325817a9a"
+      },
+      "origins": [
+        "A10"
+      ],
+      "parameters": {
+        "mode": "unkeyed",
+        "outputBytes": 64
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "INITIAL_HASH_H0",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "BLAKE2b-256",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "argon2-0.5.3",
+      "function": "blake2b_long",
+      "id": "D17",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": ".finalize_variable(out)",
+        "column": 13,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 33,
+        "path": "argon2-0.5.3/src/blake2b_long.rs",
+        "sourceSha256": "bc4ed31907946ff5d99ddc8641944d794a91cd108e6f2bd356ba29a2f9620983"
+      },
+      "origins": [
+        "A10"
+      ],
+      "parameters": {
+        "mode": "unkeyed",
+        "outputBytes": 32
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "FINAL_32_BYTE_TAG",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "BLAKE2b-512",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "argon2-0.5.3",
+      "function": "blake2b_long",
+      "id": "D18",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "let mut last_output = digest.finalize();",
+        "column": 5,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 47,
+        "path": "argon2-0.5.3/src/blake2b_long.rs",
+        "sourceSha256": "bc4ed31907946ff5d99ddc8641944d794a91cd108e6f2bd356ba29a2f9620983"
+      },
+      "origins": [
+        "A10"
+      ],
+      "parameters": {
+        "mode": "unkeyed",
+        "outputBytes": 64
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "EXPANSION_START",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "BLAKE2b-512",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "argon2-0.5.3",
+      "function": "blake2b_long",
+      "id": "D19",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "last_output = Blake2b512::digest(last_output);",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 65,
+        "path": "argon2-0.5.3/src/blake2b_long.rs",
+        "sourceSha256": "bc4ed31907946ff5d99ddc8641944d794a91cd108e6f2bd356ba29a2f9620983"
+      },
+      "origins": [
+        "A10"
+      ],
+      "parameters": {
+        "inputBytes": 64,
+        "outputBytes": 64
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "EXPANSION_CHAIN",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "BLAKE2b-512",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "argon2-0.5.3",
+      "function": "blake2b_long",
+      "id": "D20",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": ".finalize_variable(&mut out[counter..])",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 75,
+        "path": "argon2-0.5.3/src/blake2b_long.rs",
+        "sourceSha256": "bc4ed31907946ff5d99ddc8641944d794a91cd108e6f2bd356ba29a2f9620983"
+      },
+      "origins": [
+        "A10"
+      ],
+      "parameters": {
+        "expansionOutputBytes": 1024,
+        "mode": "unkeyed",
+        "outputBytes": 64
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "EXPANSION_TAIL_FOR_1024_BYTE_BLOCK",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "BLAKE3",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "blake3-1.8.5",
+      "function": "compress_in_place",
+      "id": "D21",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "ffi::blake3_compress_in_place_sse2(",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 12,
+        "path": "blake3-1.8.5/src/ffi_sse2.rs",
+        "sourceSha256": "60d3f6b881210ee67fb1003181b07ff72c7f20e501fb687adc8d13ec1a65551f"
+      },
+      "origins": [
+        "A03"
+      ],
+      "parameters": {
+        "backend": "SSE2",
+        "blockBytes": 64,
+        "chainingValueBytes": 32
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "NATIVE_COMPRESSION_SSE2",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "BLAKE3",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "blake3-1.8.5",
+      "function": "compress_in_place",
+      "id": "D22",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "ffi::blake3_compress_in_place_sse41(",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 12,
+        "path": "blake3-1.8.5/src/ffi_sse41.rs",
+        "sourceSha256": "82715fa59fd6870e33a8068f81516ea993616e7a3b6b8551692b2f4d1eea202b"
+      },
+      "origins": [
+        "A03"
+      ],
+      "parameters": {
+        "backend": "SSE41_OR_AVX2",
+        "blockBytes": 64,
+        "chainingValueBytes": 32
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "NATIVE_COMPRESSION_SSE41_OR_AVX2",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "BLAKE3",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "blake3-1.8.5",
+      "function": "compress_in_place",
+      "id": "D23",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "ffi::blake3_compress_in_place_avx512(",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 12,
+        "path": "blake3-1.8.5/src/ffi_avx512.rs",
+        "sourceSha256": "2afacbfac72c4886fcde647a549817493fd392d27a0768327f8c498b88796b65"
+      },
+      "origins": [
+        "A03"
+      ],
+      "parameters": {
+        "backend": "AVX512",
+        "blockBytes": 64,
+        "chainingValueBytes": 32
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "NATIVE_COMPRESSION_AVX512",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "BLAKE3",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "blake3-1.8.5",
+      "function": "hash_many",
+      "id": "D24",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "ffi::blake3_hash_many_sse2(",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 60,
+        "path": "blake3-1.8.5/src/ffi_sse2.rs",
+        "sourceSha256": "60d3f6b881210ee67fb1003181b07ff72c7f20e501fb687adc8d13ec1a65551f"
+      },
+      "origins": [
+        "A03"
+      ],
+      "parameters": {
+        "backend": "SSE2",
+        "blockBytes": 64,
+        "inputBytesPerItem": [
+          64,
+          1024
+        ],
+        "outputBytesPerItem": 32
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "NATIVE_PARALLEL_HASH_SSE2",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "BLAKE3",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "blake3-1.8.5",
+      "function": "hash_many",
+      "id": "D25",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "ffi::blake3_hash_many_sse41(",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 60,
+        "path": "blake3-1.8.5/src/ffi_sse41.rs",
+        "sourceSha256": "82715fa59fd6870e33a8068f81516ea993616e7a3b6b8551692b2f4d1eea202b"
+      },
+      "origins": [
+        "A03"
+      ],
+      "parameters": {
+        "backend": "SSE41",
+        "blockBytes": 64,
+        "inputBytesPerItem": [
+          64,
+          1024
+        ],
+        "outputBytesPerItem": 32
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "NATIVE_PARALLEL_HASH_SSE41",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "BLAKE3",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "blake3-1.8.5",
+      "function": "hash_many",
+      "id": "D26",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "ffi::blake3_hash_many_avx2(",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 22,
+        "path": "blake3-1.8.5/src/ffi_avx2.rs",
+        "sourceSha256": "8769cfe9d5cf98732a9e24c20e966a121f7db42afcdcda26d02b3492d52be871"
+      },
+      "origins": [
+        "A03"
+      ],
+      "parameters": {
+        "backend": "AVX2",
+        "blockBytes": 64,
+        "inputBytesPerItem": [
+          64,
+          1024
+        ],
+        "outputBytesPerItem": 32
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "NATIVE_PARALLEL_HASH_AVX2",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "BLAKE3",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "blake3-1.8.5",
+      "function": "hash_many",
+      "id": "D27",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "ffi::blake3_hash_many_avx512(",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 60,
+        "path": "blake3-1.8.5/src/ffi_avx512.rs",
+        "sourceSha256": "2afacbfac72c4886fcde647a549817493fd392d27a0768327f8c498b88796b65"
+      },
+      "origins": [
+        "A03"
+      ],
+      "parameters": {
+        "backend": "AVX512",
+        "blockBytes": 64,
+        "inputBytesPerItem": [
+          64,
+          1024
+        ],
+        "outputBytesPerItem": 32
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "NATIVE_PARALLEL_HASH_AVX512",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "AES-256",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "aes-0.8.4",
+      "function": "Aes256BackEnc::proc_block",
+      "id": "D28",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "$module::encrypt1(&self.0.round_keys, block);",
+        "column": 21,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 290,
+        "path": "aes-0.8.4/src/ni.rs",
+        "sourceSha256": "15b9a67dbedc3b558ddec063489be4a6607e568afddd8345506be36952fc3bde"
+      },
+      "origins": [
+        "A04"
+      ],
+      "parameters": {
+        "blockBits": 128,
+        "keyBits": 256,
+        "parallelBatchBlocks": 1,
+        "rounds": 14
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "AES_NI_BLOCK_ENCRYPT",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "AES-256",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "aes-0.8.4",
+      "function": "Aes256BackEnc::proc_block",
+      "id": "D29",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "let res = $fixslice_encrypt(&self.0.keys, &blocks);",
+        "column": 17,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 263,
+        "path": "aes-0.8.4/src/soft.rs",
+        "sourceSha256": "3a84211717fdc86a2b0f0d9086f33410bee2ff9be480f50c981980f678a0c2a8"
+      },
+      "origins": [
+        "A04"
+      ],
+      "parameters": {
+        "blockBits": 128,
+        "callerUsesFirstBlockOnly": true,
+        "keyBits": 256,
+        "parallelBatchBlocks": 4,
+        "rounds": 14
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "SOFTWARE_FIXSLICE_BLOCK_ENCRYPT",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "Argon2id",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "argon2-0.5.3",
+      "function": "Argon2::fill_blocks",
+      "id": "D30",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "self.compress(&memory_blocks[prev_index], &memory_blocks[ref_index]);",
+        "column": 29,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 441,
+        "path": "argon2-0.5.3/src/lib.rs",
+        "sourceSha256": "c1ed703c605d55d4b82f807a891bb3eb9d79e061bf129ac5637ab41325817a9a"
+      },
+      "origins": [
+        "A10"
+      ],
+      "parameters": {
+        "algorithm": "Argon2id",
+        "memoryBlockBytes": 1024,
+        "notFullBlake2Digest": true
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "MEMORY_BLOCK_COMPRESSION_NOT_BLAKE2_DIGEST",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "Argon2id",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "argon2-0.5.3",
+      "function": "Argon2::update_address_block",
+      "id": "D31",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "*address_block = self.compress(zero_block, input_block);",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 517,
+        "path": "argon2-0.5.3/src/lib.rs",
+        "sourceSha256": "c1ed703c605d55d4b82f807a891bb3eb9d79e061bf129ac5637ab41325817a9a"
+      },
+      "origins": [
+        "A10"
+      ],
+      "parameters": {
+        "dataIndependentAddressing": "FIRST_HALF_OF_FIRST_PASS",
+        "memoryBlockBytes": 1024
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "ADDRESS_BLOCK_COMPRESSION_FIRST",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "Argon2id",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "argon2-0.5.3",
+      "function": "Argon2::update_address_block",
+      "id": "D32",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "*address_block = self.compress(zero_block, address_block);",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 518,
+        "path": "argon2-0.5.3/src/lib.rs",
+        "sourceSha256": "c1ed703c605d55d4b82f807a891bb3eb9d79e061bf129ac5637ab41325817a9a"
+      },
+      "origins": [
+        "A10"
+      ],
+      "parameters": {
+        "dataIndependentAddressing": "FIRST_HALF_OF_FIRST_PASS",
+        "memoryBlockBytes": 1024
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "ADDRESS_BLOCK_COMPRESSION_SECOND",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "Argon2id",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "argon2-0.5.3",
+      "function": "Argon2::compress::compress_avx2",
+      "id": "D33",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "Block::compress(rhs, lhs)",
+        "binding": "EXACT_LINE_IN_PINNED_SOURCE",
+        "column": 17,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 465,
+        "path": "argon2-0.5.3/src/lib.rs",
+        "sourceSha256": "c1ed703c605d55d4b82f807a891bb3eb9d79e061bf129ac5637ab41325817a9a"
+      },
+      "origins": [
+        "A10"
+      ],
+      "parameters": {
+        "backend": "AVX2",
+        "memoryBlockBytes": 1024,
+        "notFullBlake2Digest": true
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "AVX2_MEMORY_BLOCK_COMPRESSION",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "Argon2id",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "argon2-0.5.3",
+      "function": "Argon2::compress",
+      "id": "D34",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "Block::compress(rhs, lhs)",
+        "binding": "EXACT_LINE_IN_PINNED_SOURCE",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 473,
+        "path": "argon2-0.5.3/src/lib.rs",
+        "sourceSha256": "c1ed703c605d55d4b82f807a891bb3eb9d79e061bf129ac5637ab41325817a9a"
+      },
+      "origins": [
+        "A10"
+      ],
+      "parameters": {
+        "backend": "PORTABLE",
+        "memoryBlockBytes": 1024,
+        "notFullBlake2Digest": true
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "PORTABLE_MEMORY_BLOCK_COMPRESSION",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": null,
+      "algorithmContexts": [
+        {
+          "algorithm": "BLAKE2b-256",
+          "parameters": {
+            "mode": "unkeyed",
+            "outputBytes": 32
+          }
+        },
+        {
+          "algorithm": "BLAKE2b-512",
+          "parameters": {
+            "mode": "unkeyed",
+            "outputBytes": 64
+          }
+        }
+      ],
+      "classification": "OPERATION",
+      "crate": "blake2-0.10.6",
+      "function": "Blake2bVarCore::update_blocks",
+      "id": "D35",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "self.compress(block, 0, 0);",
+        "column": 21,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 199,
+        "path": "blake2-0.10.6/src/macros.rs",
+        "sourceSha256": "4d92b71adb3f464758635fa00058d478b814bb5004e5677055815547acf3a698"
+      },
+      "origins": [
+        "A10"
+      ],
+      "parameters": {
+        "blockBytes": 128,
+        "outputBytesContexts": [
+          32,
+          64
+        ],
+        "stateUpdateOnly": true
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "SHARED_COMPRESSION_OUTPUT_CONTEXT_DEPENDENT",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": null,
+      "algorithmContexts": [
+        {
+          "algorithm": "BLAKE2b-256",
+          "parameters": {
+            "mode": "unkeyed",
+            "outputBytes": 32
+          }
+        },
+        {
+          "algorithm": "BLAKE2b-512",
+          "parameters": {
+            "mode": "unkeyed",
+            "outputBytes": 64
+          }
+        }
+      ],
+      "classification": "OPERATION",
+      "crate": "blake2-0.10.6",
+      "function": "Blake2bVarCore::finalize_with_flag",
+      "id": "D36",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "self.compress(final_block, !0, flag);",
+        "column": 17,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 102,
+        "path": "blake2-0.10.6/src/macros.rs",
+        "sourceSha256": "4d92b71adb3f464758635fa00058d478b814bb5004e5677055815547acf3a698"
+      },
+      "origins": [
+        "A10"
+      ],
+      "parameters": {
+        "blockBytes": 128,
+        "finalBlock": true,
+        "outputBytesContexts": [
+          32,
+          64
+        ]
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "SHARED_FINAL_COMPRESSION_OUTPUT_CONTEXT_DEPENDENT",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "SHA-256",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "sha2-0.10.9",
+      "function": "sha256::x86::compress",
+      "id": "D37",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "digest_blocks(state, blocks);",
+        "column": 13,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 107,
+        "path": "sha2-0.10.9/src/sha256/x86.rs",
+        "sourceSha256": "70f1597f2029522b35bfd026df0a8908f086523ab2a80ba3ef35e6231b56353c"
+      },
+      "origins": [
+        "A01",
+        "A05",
+        "A07"
+      ],
+      "parameters": {
+        "backend": "SHA_NI",
+        "blockBytes": 64,
+        "stateUpdateOnly": true
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "SHA_NI_BACKEND_COMPRESSION",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "SHA-256",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "sha2-0.10.9",
+      "function": "sha256::x86::compress",
+      "id": "D38",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "super::soft::compress(state, blocks);",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 110,
+        "path": "sha2-0.10.9/src/sha256/x86.rs",
+        "sourceSha256": "70f1597f2029522b35bfd026df0a8908f086523ab2a80ba3ef35e6231b56353c"
+      },
+      "origins": [
+        "A01",
+        "A05",
+        "A07"
+      ],
+      "parameters": {
+        "backend": "SOFTWARE",
+        "blockBytes": 64,
+        "stateUpdateOnly": true
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "SOFTWARE_BACKEND_DISPATCH",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "SHA-256",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "sha2-0.10.9",
+      "function": "sha256::soft::compress",
+      "id": "D39",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "sha256_digest_block_u32(&mut state_cpy, &block_u32);",
+        "column": 9,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 215,
+        "path": "sha2-0.10.9/src/sha256/soft.rs",
+        "sourceSha256": "98e765a8e8dfa0af31f2b76570f212e6b3099522bf300e1554cbbd9fd5d02960"
+      },
+      "origins": [
+        "A01",
+        "A05",
+        "A07"
+      ],
+      "parameters": {
+        "backend": "SOFTWARE",
+        "blockBytes": 64,
+        "rounds": 64,
+        "stateUpdateOnly": true
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "SOFTWARE_BLOCK_COMPRESSION",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "BLAKE3",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "blake3-1.8.5",
+      "function": "Platform::compress_in_place",
+      "id": "D40",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "Platform::Portable => portable::compress_in_place(cv, block, block_len, counter, flags),",
+        "column": 13,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 132,
+        "path": "blake3-1.8.5/src/platform.rs",
+        "sourceSha256": "f97b094ebc0e137b9daf8cff6c086b41912bf59cbb449ed1c109447ff6b4c5d2"
+      },
+      "origins": [
+        "A03"
+      ],
+      "parameters": {
+        "backend": "PORTABLE",
+        "blockBytes": 64,
+        "chainingValueBytes": 32
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "PORTABLE_BACKEND_COMPRESSION",
+      "runtimeObserved": false
+    },
+    {
+      "algorithm": "BLAKE3",
+      "algorithmContexts": [],
+      "classification": "OPERATION",
+      "crate": "blake3-1.8.5",
+      "function": "Platform::hash_many",
+      "id": "D41",
+      "level": "DEPENDENCY",
+      "location": {
+        "anchor": "Platform::Portable => portable::hash_many(",
+        "column": 13,
+        "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+        "line": 217,
+        "path": "blake3-1.8.5/src/platform.rs",
+        "sourceSha256": "f97b094ebc0e137b9daf8cff6c086b41912bf59cbb449ed1c109447ff6b4c5d2"
+      },
+      "origins": [
+        "A03"
+      ],
+      "parameters": {
+        "backend": "PORTABLE",
+        "blockBytes": 64,
+        "inputBytesPerItem": [
+          64,
+          1024
+        ],
+        "outputBytesPerItem": 32
+      },
+      "reviewStatus": "SOURCE_REVIEWED_FOR_ALGORITHM_USE",
+      "role": "PORTABLE_BACKEND_PARALLEL_HASH",
+      "runtimeObserved": false
+    }
+  ],
+  "lockSha256": "be98fb32b29a470335bc82549bd20697d0dedb1f4eb3cf30046291142ab21653",
+  "openBoundaries": [],
+  "reviewedBoundaries": [
+    {
+      "id": "B01",
+      "origins": [
+        "A03"
+      ],
+      "reason": "Seven reachable FFI sites mapped to pinned leaf assembly and compiled symbols; portable hash path reviewed. XOF entry points are not called by this root.",
+      "status": "SOURCE_REVIEWED",
+      "subject": "BLAKE3 native SIMD backends"
+    },
+    {
+      "id": "B02",
+      "origins": [
+        "A04"
+      ],
+      "reason": "Single-block closure mapped to AES-NI/fixslice AES-256, key schedules and GF key conversion. No payload decryption or GHASH/POLYVAL message authentication from initialization.",
+      "status": "SOURCE_REVIEWED",
+      "subject": "AES and GHASH/POLYVAL initialization"
+    },
+    {
+      "id": "B03",
+      "origins": [
+        "A10"
+      ],
+      "reason": "Defaults, output callback, validation branches, Argon2 block processing and BLAKE2 32/64-byte contexts mapped to pinned source. The Argon2 permutation is not a separate full BLAKE2 digest.",
+      "status": "SOURCE_REVIEWED",
+      "subject": "Argon2 and BLAKE2 processing"
+    },
+    {
+      "id": "B04",
+      "origins": [
+        "A01",
+        "A05",
+        "A07"
+      ],
+      "reason": "Fixed SHA-256 types, HMAC key branches, PBKDF2 PRF loop, block-buffer callbacks and SHA-NI/software paths mapped. No inference of runtime CPU branch or inventory-wide absence.",
+      "status": "SOURCE_REVIEWED",
+      "subject": "SHA-256 trait dispatch and error branches"
+    }
+  ],
+  "sourceSha256": "5d838be73a718ef6c6626532d4e5e9c1dcb061e523e1cd76b2cfe4b0fd1b3769",
+  "supportingEvidence": [
+    {
+      "anchor": "pub type Aes256Gcm = AesGcm<Aes256, U12>;",
+      "column": 1,
+      "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+      "line": 167,
+      "path": "aes-gcm-0.10.3/src/lib.rs",
+      "sourceSha256": "9261306cb6e8ce08a3559d69b2c301b9c0474234b3ff4b92e3e3c8cd7937f479"
+    },
+    {
+      "anchor": "pub struct AesGcm<Aes, NonceSize, TagSize = U16>",
+      "column": 1,
+      "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+      "line": 193,
+      "path": "aes-gcm-0.10.3/src/lib.rs",
+      "sourceSha256": "9261306cb6e8ce08a3559d69b2c301b9c0474234b3ff4b92e3e3c8cd7937f479"
+    },
+    {
+      "anchor": "pub fn from_secret(secret: &[u8]) -> Self {",
+      "column": 5,
+      "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+      "line": 22,
+      "path": "jsonwebtoken-9.3.1/src/encoding.rs",
+      "sourceSha256": "b7d937e3ed7bbb71360b9219a990ee1a25f8ee2c13ed8f3de9d78fba7aa7c97f"
+    },
+    {
+      "anchor": "pub fn encode_b64(input: &[u8]) -> Result<Self> {",
+      "column": 5,
+      "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+      "line": 237,
+      "path": "password-hash-0.5.0/src/salt.rs",
+      "sourceSha256": "c475e04c49716ec7278abf7147980c73ed53081f32f4b118474d10c1e6a89cb8"
+    },
+    {
+      "anchor": "Self::new(Algorithm::default(), Version::default(), Params::default())",
+      "column": 9,
+      "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+      "line": 178,
+      "path": "argon2-0.5.3/src/lib.rs",
+      "sourceSha256": "c1ed703c605d55d4b82f807a891bb3eb9d79e061bf129ac5637ab41325817a9a"
+    },
+    {
+      "anchor": "pub const DEFAULT_M_COST: u32 = 19 * 1024;",
+      "column": 5,
+      "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+      "line": 42,
+      "path": "argon2-0.5.3/src/params.rs",
+      "sourceSha256": "54e4c29dd876be643aa0d0d6466133346cd4ffeae75fe3f316a5196b39cf4fb5"
+    },
+    {
+      "anchor": "pub const DEFAULT_T_COST: u32 = 2;",
+      "column": 5,
+      "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+      "line": 52,
+      "path": "argon2-0.5.3/src/params.rs",
+      "sourceSha256": "54e4c29dd876be643aa0d0d6466133346cd4ffeae75fe3f316a5196b39cf4fb5"
+    },
+    {
+      "anchor": "pub const DEFAULT_P_COST: u32 = 1;",
+      "column": 5,
+      "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+      "line": 61,
+      "path": "argon2-0.5.3/src/params.rs",
+      "sourceSha256": "54e4c29dd876be643aa0d0d6466133346cd4ffeae75fe3f316a5196b39cf4fb5"
+    },
+    {
+      "anchor": "pub const DEFAULT_OUTPUT_LEN: usize = 32;",
+      "column": 5,
+      "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+      "line": 76,
+      "path": "argon2-0.5.3/src/params.rs",
+      "sourceSha256": "54e4c29dd876be643aa0d0d6466133346cd4ffeae75fe3f316a5196b39cf4fb5"
+    },
+    {
+      "anchor": "blake2b_long(inputs, &mut hash)?;",
+      "column": 17,
+      "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+      "line": 317,
+      "path": "argon2-0.5.3/src/lib.rs",
+      "sourceSha256": "c1ed703c605d55d4b82f807a891bb3eb9d79e061bf129ac5637ab41325817a9a"
+    },
+    {
+      "anchor": "blake2b_long(&[&blockhash_bytes], out)?;",
+      "column": 9,
+      "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+      "line": 499,
+      "path": "argon2-0.5.3/src/lib.rs",
+      "sourceSha256": "c1ed703c605d55d4b82f807a891bb3eb9d79e061bf129ac5637ab41325817a9a"
+    },
+    {
+      "anchor": "Self::builder_with_protocol_versions(versions::DEFAULT_VERSIONS)",
+      "column": 9,
+      "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+      "line": 300,
+      "path": "rustls-0.23.40/src/client/client_conn.rs",
+      "sourceSha256": "e496dd0d588bfb5fd42e6c721f723925184f98399b2fd234b3814845e53401d6"
+    },
+    {
+      "anchor": "cipher_suites: DEFAULT_CIPHER_SUITES.to_vec(),",
+      "column": 9,
+      "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+      "line": 44,
+      "path": "rustls-0.23.40/src/crypto/aws_lc_rs/mod.rs",
+      "sourceSha256": "81a60a0e447dbaad5e6986a3b7b039186f435ccdded702557f18f5c862388a44"
+    },
+    {
+      "anchor": "let kx = group.name().key_exchange_algorithm();",
+      "column": 13,
+      "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+      "line": 230,
+      "path": "rustls-0.23.40/src/builder.rs",
+      "sourceSha256": "3cfebc1faeb5e2b7fbb8ede68aca1240c7ba69061f3381a1a4ded87f11bf5d6a"
+    },
+    {
+      "anchor": "let mut h_polyval = polyval::mulx(&h);",
+      "column": 9,
+      "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+      "line": 72,
+      "path": "ghash-0.5.1/src/lib.rs",
+      "sourceSha256": "df449412b068a1d66fad81b814347980b04ea724e0642fb10a84b53806d6c302"
+    },
+    {
+      "anchor": "let result = GHash(Polyval::new_with_init_block(&h_polyval, init_block));",
+      "column": 9,
+      "columnConvention": "ONE_BASED_UNICODE_CHARACTER",
+      "line": 78,
+      "path": "ghash-0.5.1/src/lib.rs",
+      "sourceSha256": "df449412b068a1d66fad81b814347980b04ea724e0642fb10a84b53806d6c302"
+    }
+  ],
+  "upstreamCommit": "6a646353e4fbd9d64fa115176241d7a233e19630"
+}

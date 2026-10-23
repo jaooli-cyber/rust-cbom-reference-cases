@@ -1,0 +1,1249 @@
+{
+  "change-pbkdf2-rounds": {
+    "addedBlakeComponents": 2,
+    "allowedComparisonReordering": [
+      "COMPONENT_LIST",
+      "DEPENDENCY_LIST",
+      "PROPERTY_LIST",
+      "EDGE_TARGET_LIST"
+    ],
+    "applicationControls": [
+      {
+        "algorithm": "CORRECT",
+        "id": "A01",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A02",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A03",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A04",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A05",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "NOT_APPLICABLE",
+        "id": "A06",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A07",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": null,
+        "id": "A08",
+        "position": "NOT_REPRESENTED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A09",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A10",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "NOT_APPLICABLE",
+        "id": "A11",
+        "position": "MATCHED"
+      }
+    ],
+    "case": "change-pbkdf2-rounds",
+    "constituentEvidenceSite": "A10",
+    "duplicatesPreservedOrRejected": true,
+    "explicitOperationClaims": 5,
+    "nonceChangedOccurrences": 2,
+    "packageUsage": [
+      {
+        "claims": [
+          {
+            "pointer": "/components/19/properties/2/value",
+            "value": "reachable"
+          }
+        ],
+        "componentPointers": [
+          "/components/19"
+        ],
+        "expected": "reachable",
+        "outcome": "CORRECT",
+        "package": "md5",
+        "runtimeUseImplied": false
+      },
+      {
+        "claims": [
+          {
+            "pointer": "/components/8/properties/2/value",
+            "value": "reachable"
+          }
+        ],
+        "componentPointers": [
+          "/components/8"
+        ],
+        "expected": "reachable",
+        "outcome": "CORRECT",
+        "package": "blake3",
+        "runtimeUseImplied": false
+      },
+      {
+        "claims": [
+          {
+            "pointer": "/components/21/properties/2/value",
+            "value": "reachable"
+          }
+        ],
+        "componentPointers": [
+          "/components/21"
+        ],
+        "expected": "reachable",
+        "outcome": "CORRECT",
+        "package": "pbkdf2",
+        "runtimeUseImplied": false
+      },
+      {
+        "claims": [
+          {
+            "pointer": "/components/7/properties/3/value",
+            "value": "reachable"
+          }
+        ],
+        "componentPointers": [
+          "/components/7"
+        ],
+        "expected": "reachable",
+        "outcome": "CORRECT",
+        "package": "blake2",
+        "runtimeUseImplied": false
+      }
+    ],
+    "parameters": [
+      {
+        "expected": 16,
+        "field": "outputBytes",
+        "reported": [
+          "16"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A02",
+        "status": "CORRECT"
+      },
+      {
+        "expected": "unkeyed",
+        "field": "mode",
+        "reported": [
+          "unkeyed"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A03",
+        "status": "CORRECT"
+      },
+      {
+        "expected": 19,
+        "field": "version",
+        "reported": [
+          "19"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A09",
+        "status": "CORRECT"
+      },
+      {
+        "expected": 32,
+        "field": "outputBytes",
+        "reported": [
+          "32"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A09",
+        "status": "CORRECT"
+      },
+      {
+        "expected": 19,
+        "field": "version",
+        "reported": [
+          "19"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A10",
+        "status": "CORRECT"
+      },
+      {
+        "expected": 32,
+        "field": "outputBytes",
+        "reported": [
+          "32"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A10",
+        "status": "CORRECT"
+      }
+    ],
+    "runtimeUseImplied": false,
+    "scopeNote": "FOLDED_INTERNALS_NOT_DIRECT_DEPENDENCY_SITE_COVERAGE",
+    "status": "PASS",
+    "supplementalSchema": {
+      "cryptoSchemaSource": "https://cyclonedx.org/schema/cryptography-defs.schema.json",
+      "diagnostics": [],
+      "pinnedProductionProfileChanged": false,
+      "registryDataLastUpdated": "2026-02-24T00:00:00Z",
+      "registryDataSha256": "86cad42c3efb18caac241025696d5a7d08adffa472fbc35934f7b105d1b11550",
+      "registrySource": "https://cyclonedx.org/schema/cryptography-defs.json",
+      "schemaResolution": "OFFLINE_NO_RETRIEVAL",
+      "schemas": {
+        "bom-1.7.schema.json": "df472ef4aaf593904c479293723a1a5c191d6672715c93b3c0b5c318f3914221",
+        "cryptography-defs.schema.json": "95897594e42f7229523fd7a03272da284e0591b1c49550a8b62a355df6357249",
+        "jsf-0.82.schema.json": "8bae002c25e723db7ee1f26afde680ae1a2b1a8f6b4b4b0fd65dc3becb090aae",
+        "spdx.schema.json": "54a6288292bc6c90b0d3952f5f939f17436fa76704ffe68a46e5b78539c7cc1b"
+      },
+      "scope": "SAME_PINNED_1_7_ROOT_WITH_SEPARATELY_SNAPSHOTTED_CURRENT_CRYPTO_REGISTRY_SCHEMA",
+      "status": "VALID"
+    },
+    "tlsBuilder": "CONFIGURATION_NOT_CONNECTION",
+    "unexpectedDifferences": []
+  },
+  "initialization-only-application": {
+    "addedBlakeComponents": 0,
+    "allowedComparisonReordering": [
+      "COMPONENT_LIST",
+      "DEPENDENCY_LIST",
+      "PROPERTY_LIST",
+      "EDGE_TARGET_LIST"
+    ],
+    "applicationControls": [
+      {
+        "algorithm": "CORRECT",
+        "id": "A04",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A05",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "NOT_APPLICABLE",
+        "id": "A06",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": null,
+        "id": "A08",
+        "position": "NOT_REPRESENTED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A09",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "NOT_APPLICABLE",
+        "id": "A11",
+        "position": "MATCHED"
+      }
+    ],
+    "case": "initialization-only-application",
+    "constituentEvidenceSite": null,
+    "duplicatesPreservedOrRejected": true,
+    "explicitOperationClaims": 0,
+    "nonceChangedOccurrences": 2,
+    "packageUsage": [
+      {
+        "claims": [
+          {
+            "pointer": "/components/19/properties/2/value",
+            "value": "declared-not-used"
+          }
+        ],
+        "componentPointers": [
+          "/components/19"
+        ],
+        "expected": "declared-not-used",
+        "outcome": "CORRECT",
+        "package": "md5",
+        "runtimeUseImplied": false
+      },
+      {
+        "claims": [
+          {
+            "pointer": "/components/8/properties/2/value",
+            "value": "declared-not-used"
+          }
+        ],
+        "componentPointers": [
+          "/components/8"
+        ],
+        "expected": "declared-not-used",
+        "outcome": "CORRECT",
+        "package": "blake3",
+        "runtimeUseImplied": false
+      },
+      {
+        "claims": [
+          {
+            "pointer": "/components/21/properties/2/value",
+            "value": "declared-not-used"
+          }
+        ],
+        "componentPointers": [
+          "/components/21"
+        ],
+        "expected": "declared-not-used",
+        "outcome": "CORRECT",
+        "package": "pbkdf2",
+        "runtimeUseImplied": false
+      },
+      {
+        "claims": [
+          {
+            "pointer": "/components/7/properties/3/value",
+            "value": "present"
+          }
+        ],
+        "componentPointers": [
+          "/components/7"
+        ],
+        "expected": "present",
+        "outcome": "CORRECT",
+        "package": "blake2",
+        "runtimeUseImplied": false
+      }
+    ],
+    "parameters": [
+      {
+        "field": "outputBytes",
+        "site": "A02",
+        "status": "NOT_APPLICABLE"
+      },
+      {
+        "field": "mode",
+        "site": "A03",
+        "status": "NOT_APPLICABLE"
+      },
+      {
+        "expected": 19,
+        "field": "version",
+        "reported": [
+          "19"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A09",
+        "status": "CORRECT"
+      },
+      {
+        "expected": 32,
+        "field": "outputBytes",
+        "reported": [
+          "32"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A09",
+        "status": "CORRECT"
+      },
+      {
+        "field": "version",
+        "site": "A10",
+        "status": "NOT_APPLICABLE"
+      },
+      {
+        "field": "outputBytes",
+        "site": "A10",
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "runtimeUseImplied": false,
+    "scopeNote": "FOLDED_INTERNALS_NOT_DIRECT_DEPENDENCY_SITE_COVERAGE",
+    "status": "PASS",
+    "supplementalSchema": {
+      "cryptoSchemaSource": "https://cyclonedx.org/schema/cryptography-defs.schema.json",
+      "diagnostics": [],
+      "pinnedProductionProfileChanged": false,
+      "registryDataLastUpdated": "2026-02-24T00:00:00Z",
+      "registryDataSha256": "86cad42c3efb18caac241025696d5a7d08adffa472fbc35934f7b105d1b11550",
+      "registrySource": "https://cyclonedx.org/schema/cryptography-defs.json",
+      "schemaResolution": "OFFLINE_NO_RETRIEVAL",
+      "schemas": {
+        "bom-1.7.schema.json": "df472ef4aaf593904c479293723a1a5c191d6672715c93b3c0b5c318f3914221",
+        "cryptography-defs.schema.json": "95897594e42f7229523fd7a03272da284e0591b1c49550a8b62a355df6357249",
+        "jsf-0.82.schema.json": "8bae002c25e723db7ee1f26afde680ae1a2b1a8f6b4b4b0fd65dc3becb090aae",
+        "spdx.schema.json": "54a6288292bc6c90b0d3952f5f939f17436fa76704ffe68a46e5b78539c7cc1b"
+      },
+      "scope": "SAME_PINNED_1_7_ROOT_WITH_SEPARATELY_SNAPSHOTTED_CURRENT_CRYPTO_REGISTRY_SCHEMA",
+      "status": "VALID"
+    },
+    "tlsBuilder": "CONFIGURATION_NOT_CONNECTION",
+    "unexpectedDifferences": []
+  },
+  "move-call-sites": {
+    "addedBlakeComponents": 2,
+    "allowedComparisonReordering": [
+      "COMPONENT_LIST",
+      "DEPENDENCY_LIST",
+      "PROPERTY_LIST",
+      "EDGE_TARGET_LIST"
+    ],
+    "applicationControls": [
+      {
+        "algorithm": "CORRECT",
+        "id": "A01",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A02",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A03",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A04",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A05",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "NOT_APPLICABLE",
+        "id": "A06",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A07",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": null,
+        "id": "A08",
+        "position": "NOT_REPRESENTED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A09",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A10",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "NOT_APPLICABLE",
+        "id": "A11",
+        "position": "MATCHED"
+      }
+    ],
+    "case": "move-call-sites",
+    "constituentEvidenceSite": "A10",
+    "duplicatesPreservedOrRejected": true,
+    "explicitOperationClaims": 5,
+    "nonceChangedOccurrences": 2,
+    "packageUsage": [
+      {
+        "claims": [
+          {
+            "pointer": "/components/19/properties/2/value",
+            "value": "reachable"
+          }
+        ],
+        "componentPointers": [
+          "/components/19"
+        ],
+        "expected": "reachable",
+        "outcome": "CORRECT",
+        "package": "md5",
+        "runtimeUseImplied": false
+      },
+      {
+        "claims": [
+          {
+            "pointer": "/components/8/properties/2/value",
+            "value": "reachable"
+          }
+        ],
+        "componentPointers": [
+          "/components/8"
+        ],
+        "expected": "reachable",
+        "outcome": "CORRECT",
+        "package": "blake3",
+        "runtimeUseImplied": false
+      },
+      {
+        "claims": [
+          {
+            "pointer": "/components/21/properties/2/value",
+            "value": "reachable"
+          }
+        ],
+        "componentPointers": [
+          "/components/21"
+        ],
+        "expected": "reachable",
+        "outcome": "CORRECT",
+        "package": "pbkdf2",
+        "runtimeUseImplied": false
+      },
+      {
+        "claims": [
+          {
+            "pointer": "/components/7/properties/3/value",
+            "value": "reachable"
+          }
+        ],
+        "componentPointers": [
+          "/components/7"
+        ],
+        "expected": "reachable",
+        "outcome": "CORRECT",
+        "package": "blake2",
+        "runtimeUseImplied": false
+      }
+    ],
+    "parameters": [
+      {
+        "expected": 16,
+        "field": "outputBytes",
+        "reported": [
+          "16"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A02",
+        "status": "CORRECT"
+      },
+      {
+        "expected": "unkeyed",
+        "field": "mode",
+        "reported": [
+          "unkeyed"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A03",
+        "status": "CORRECT"
+      },
+      {
+        "expected": 19,
+        "field": "version",
+        "reported": [
+          "19"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A09",
+        "status": "CORRECT"
+      },
+      {
+        "expected": 32,
+        "field": "outputBytes",
+        "reported": [
+          "32"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A09",
+        "status": "CORRECT"
+      },
+      {
+        "expected": 19,
+        "field": "version",
+        "reported": [
+          "19"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A10",
+        "status": "CORRECT"
+      },
+      {
+        "expected": 32,
+        "field": "outputBytes",
+        "reported": [
+          "32"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A10",
+        "status": "CORRECT"
+      }
+    ],
+    "runtimeUseImplied": false,
+    "scopeNote": "FOLDED_INTERNALS_NOT_DIRECT_DEPENDENCY_SITE_COVERAGE",
+    "status": "PASS",
+    "supplementalSchema": {
+      "cryptoSchemaSource": "https://cyclonedx.org/schema/cryptography-defs.schema.json",
+      "diagnostics": [],
+      "pinnedProductionProfileChanged": false,
+      "registryDataLastUpdated": "2026-02-24T00:00:00Z",
+      "registryDataSha256": "86cad42c3efb18caac241025696d5a7d08adffa472fbc35934f7b105d1b11550",
+      "registrySource": "https://cyclonedx.org/schema/cryptography-defs.json",
+      "schemaResolution": "OFFLINE_NO_RETRIEVAL",
+      "schemas": {
+        "bom-1.7.schema.json": "df472ef4aaf593904c479293723a1a5c191d6672715c93b3c0b5c318f3914221",
+        "cryptography-defs.schema.json": "95897594e42f7229523fd7a03272da284e0591b1c49550a8b62a355df6357249",
+        "jsf-0.82.schema.json": "8bae002c25e723db7ee1f26afde680ae1a2b1a8f6b4b4b0fd65dc3becb090aae",
+        "spdx.schema.json": "54a6288292bc6c90b0d3952f5f939f17436fa76704ffe68a46e5b78539c7cc1b"
+      },
+      "scope": "SAME_PINNED_1_7_ROOT_WITH_SEPARATELY_SNAPSHOTTED_CURRENT_CRYPTO_REGISTRY_SCHEMA",
+      "status": "VALID"
+    },
+    "tlsBuilder": "CONFIGURATION_NOT_CONNECTION",
+    "unexpectedDifferences": []
+  },
+  "original": {
+    "addedBlakeComponents": 2,
+    "allowedComparisonReordering": [
+      "COMPONENT_LIST",
+      "DEPENDENCY_LIST",
+      "PROPERTY_LIST",
+      "EDGE_TARGET_LIST"
+    ],
+    "applicationControls": [
+      {
+        "algorithm": "CORRECT",
+        "id": "A01",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A02",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A03",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A04",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A05",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "NOT_APPLICABLE",
+        "id": "A06",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A07",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": null,
+        "id": "A08",
+        "position": "NOT_REPRESENTED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A09",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A10",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "NOT_APPLICABLE",
+        "id": "A11",
+        "position": "MATCHED"
+      }
+    ],
+    "case": "original",
+    "constituentEvidenceSite": "A10",
+    "duplicatesPreservedOrRejected": true,
+    "explicitOperationClaims": 5,
+    "nonceChangedOccurrences": 2,
+    "packageUsage": [
+      {
+        "claims": [
+          {
+            "pointer": "/components/19/properties/2/value",
+            "value": "reachable"
+          }
+        ],
+        "componentPointers": [
+          "/components/19"
+        ],
+        "expected": "reachable",
+        "outcome": "CORRECT",
+        "package": "md5",
+        "runtimeUseImplied": false
+      },
+      {
+        "claims": [
+          {
+            "pointer": "/components/8/properties/2/value",
+            "value": "reachable"
+          }
+        ],
+        "componentPointers": [
+          "/components/8"
+        ],
+        "expected": "reachable",
+        "outcome": "CORRECT",
+        "package": "blake3",
+        "runtimeUseImplied": false
+      },
+      {
+        "claims": [
+          {
+            "pointer": "/components/21/properties/2/value",
+            "value": "reachable"
+          }
+        ],
+        "componentPointers": [
+          "/components/21"
+        ],
+        "expected": "reachable",
+        "outcome": "CORRECT",
+        "package": "pbkdf2",
+        "runtimeUseImplied": false
+      },
+      {
+        "claims": [
+          {
+            "pointer": "/components/7/properties/3/value",
+            "value": "reachable"
+          }
+        ],
+        "componentPointers": [
+          "/components/7"
+        ],
+        "expected": "reachable",
+        "outcome": "CORRECT",
+        "package": "blake2",
+        "runtimeUseImplied": false
+      }
+    ],
+    "parameters": [
+      {
+        "expected": 16,
+        "field": "outputBytes",
+        "reported": [
+          "16"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A02",
+        "status": "CORRECT"
+      },
+      {
+        "expected": "unkeyed",
+        "field": "mode",
+        "reported": [
+          "unkeyed"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A03",
+        "status": "CORRECT"
+      },
+      {
+        "expected": 19,
+        "field": "version",
+        "reported": [
+          "19"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A09",
+        "status": "CORRECT"
+      },
+      {
+        "expected": 32,
+        "field": "outputBytes",
+        "reported": [
+          "32"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A09",
+        "status": "CORRECT"
+      },
+      {
+        "expected": 19,
+        "field": "version",
+        "reported": [
+          "19"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A10",
+        "status": "CORRECT"
+      },
+      {
+        "expected": 32,
+        "field": "outputBytes",
+        "reported": [
+          "32"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A10",
+        "status": "CORRECT"
+      }
+    ],
+    "runtimeUseImplied": false,
+    "scopeNote": "FOLDED_INTERNALS_NOT_DIRECT_DEPENDENCY_SITE_COVERAGE",
+    "status": "PASS",
+    "supplementalSchema": {
+      "cryptoSchemaSource": "https://cyclonedx.org/schema/cryptography-defs.schema.json",
+      "diagnostics": [],
+      "pinnedProductionProfileChanged": false,
+      "registryDataLastUpdated": "2026-02-24T00:00:00Z",
+      "registryDataSha256": "86cad42c3efb18caac241025696d5a7d08adffa472fbc35934f7b105d1b11550",
+      "registrySource": "https://cyclonedx.org/schema/cryptography-defs.json",
+      "schemaResolution": "OFFLINE_NO_RETRIEVAL",
+      "schemas": {
+        "bom-1.7.schema.json": "df472ef4aaf593904c479293723a1a5c191d6672715c93b3c0b5c318f3914221",
+        "cryptography-defs.schema.json": "95897594e42f7229523fd7a03272da284e0591b1c49550a8b62a355df6357249",
+        "jsf-0.82.schema.json": "8bae002c25e723db7ee1f26afde680ae1a2b1a8f6b4b4b0fd65dc3becb090aae",
+        "spdx.schema.json": "54a6288292bc6c90b0d3952f5f939f17436fa76704ffe68a46e5b78539c7cc1b"
+      },
+      "scope": "SAME_PINNED_1_7_ROOT_WITH_SEPARATELY_SNAPSHOTTED_CURRENT_CRYPTO_REGISTRY_SCHEMA",
+      "status": "VALID"
+    },
+    "tlsBuilder": "CONFIGURATION_NOT_CONNECTION",
+    "unexpectedDifferences": []
+  },
+  "remove-md5-operation": {
+    "addedBlakeComponents": 2,
+    "allowedComparisonReordering": [
+      "COMPONENT_LIST",
+      "DEPENDENCY_LIST",
+      "PROPERTY_LIST",
+      "EDGE_TARGET_LIST"
+    ],
+    "applicationControls": [
+      {
+        "algorithm": "CORRECT",
+        "id": "A01",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A03",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A04",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A05",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "NOT_APPLICABLE",
+        "id": "A06",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A07",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": null,
+        "id": "A08",
+        "position": "NOT_REPRESENTED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A09",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A10",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "NOT_APPLICABLE",
+        "id": "A11",
+        "position": "MATCHED"
+      }
+    ],
+    "case": "remove-md5-operation",
+    "constituentEvidenceSite": "A10",
+    "duplicatesPreservedOrRejected": true,
+    "explicitOperationClaims": 4,
+    "nonceChangedOccurrences": 2,
+    "packageUsage": [
+      {
+        "claims": [
+          {
+            "pointer": "/components/19/properties/2/value",
+            "value": "declared-not-used"
+          }
+        ],
+        "componentPointers": [
+          "/components/19"
+        ],
+        "expected": "declared-not-used",
+        "outcome": "CORRECT",
+        "package": "md5",
+        "runtimeUseImplied": false
+      },
+      {
+        "claims": [
+          {
+            "pointer": "/components/8/properties/2/value",
+            "value": "reachable"
+          }
+        ],
+        "componentPointers": [
+          "/components/8"
+        ],
+        "expected": "reachable",
+        "outcome": "CORRECT",
+        "package": "blake3",
+        "runtimeUseImplied": false
+      },
+      {
+        "claims": [
+          {
+            "pointer": "/components/21/properties/2/value",
+            "value": "reachable"
+          }
+        ],
+        "componentPointers": [
+          "/components/21"
+        ],
+        "expected": "reachable",
+        "outcome": "CORRECT",
+        "package": "pbkdf2",
+        "runtimeUseImplied": false
+      },
+      {
+        "claims": [
+          {
+            "pointer": "/components/7/properties/3/value",
+            "value": "reachable"
+          }
+        ],
+        "componentPointers": [
+          "/components/7"
+        ],
+        "expected": "reachable",
+        "outcome": "CORRECT",
+        "package": "blake2",
+        "runtimeUseImplied": false
+      }
+    ],
+    "parameters": [
+      {
+        "field": "outputBytes",
+        "site": "A02",
+        "status": "NOT_APPLICABLE"
+      },
+      {
+        "expected": "unkeyed",
+        "field": "mode",
+        "reported": [
+          "unkeyed"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A03",
+        "status": "CORRECT"
+      },
+      {
+        "expected": 19,
+        "field": "version",
+        "reported": [
+          "19"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A09",
+        "status": "CORRECT"
+      },
+      {
+        "expected": 32,
+        "field": "outputBytes",
+        "reported": [
+          "32"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A09",
+        "status": "CORRECT"
+      },
+      {
+        "expected": 19,
+        "field": "version",
+        "reported": [
+          "19"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A10",
+        "status": "CORRECT"
+      },
+      {
+        "expected": 32,
+        "field": "outputBytes",
+        "reported": [
+          "32"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A10",
+        "status": "CORRECT"
+      }
+    ],
+    "runtimeUseImplied": false,
+    "scopeNote": "FOLDED_INTERNALS_NOT_DIRECT_DEPENDENCY_SITE_COVERAGE",
+    "status": "PASS",
+    "supplementalSchema": {
+      "cryptoSchemaSource": "https://cyclonedx.org/schema/cryptography-defs.schema.json",
+      "diagnostics": [],
+      "pinnedProductionProfileChanged": false,
+      "registryDataLastUpdated": "2026-02-24T00:00:00Z",
+      "registryDataSha256": "86cad42c3efb18caac241025696d5a7d08adffa472fbc35934f7b105d1b11550",
+      "registrySource": "https://cyclonedx.org/schema/cryptography-defs.json",
+      "schemaResolution": "OFFLINE_NO_RETRIEVAL",
+      "schemas": {
+        "bom-1.7.schema.json": "df472ef4aaf593904c479293723a1a5c191d6672715c93b3c0b5c318f3914221",
+        "cryptography-defs.schema.json": "95897594e42f7229523fd7a03272da284e0591b1c49550a8b62a355df6357249",
+        "jsf-0.82.schema.json": "8bae002c25e723db7ee1f26afde680ae1a2b1a8f6b4b4b0fd65dc3becb090aae",
+        "spdx.schema.json": "54a6288292bc6c90b0d3952f5f939f17436fa76704ffe68a46e5b78539c7cc1b"
+      },
+      "scope": "SAME_PINNED_1_7_ROOT_WITH_SEPARATELY_SNAPSHOTTED_CURRENT_CRYPTO_REGISTRY_SCHEMA",
+      "status": "VALID"
+    },
+    "tlsBuilder": "CONFIGURATION_NOT_CONNECTION",
+    "unexpectedDifferences": []
+  },
+  "replace-app-sha256-with-sha512": {
+    "addedBlakeComponents": 2,
+    "allowedComparisonReordering": [
+      "COMPONENT_LIST",
+      "DEPENDENCY_LIST",
+      "PROPERTY_LIST",
+      "EDGE_TARGET_LIST"
+    ],
+    "applicationControls": [
+      {
+        "algorithm": "CORRECT",
+        "id": "A01",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A02",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A03",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A04",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A05",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "NOT_APPLICABLE",
+        "id": "A06",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A07",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": null,
+        "id": "A08",
+        "position": "NOT_REPRESENTED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A09",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "CORRECT",
+        "id": "A10",
+        "position": "MATCHED"
+      },
+      {
+        "algorithm": "NOT_APPLICABLE",
+        "id": "A11",
+        "position": "MATCHED"
+      }
+    ],
+    "case": "replace-app-sha256-with-sha512",
+    "constituentEvidenceSite": "A10",
+    "duplicatesPreservedOrRejected": true,
+    "explicitOperationClaims": 5,
+    "nonceChangedOccurrences": 2,
+    "packageUsage": [
+      {
+        "claims": [
+          {
+            "pointer": "/components/19/properties/2/value",
+            "value": "reachable"
+          }
+        ],
+        "componentPointers": [
+          "/components/19"
+        ],
+        "expected": "reachable",
+        "outcome": "CORRECT",
+        "package": "md5",
+        "runtimeUseImplied": false
+      },
+      {
+        "claims": [
+          {
+            "pointer": "/components/8/properties/2/value",
+            "value": "reachable"
+          }
+        ],
+        "componentPointers": [
+          "/components/8"
+        ],
+        "expected": "reachable",
+        "outcome": "CORRECT",
+        "package": "blake3",
+        "runtimeUseImplied": false
+      },
+      {
+        "claims": [
+          {
+            "pointer": "/components/21/properties/2/value",
+            "value": "reachable"
+          }
+        ],
+        "componentPointers": [
+          "/components/21"
+        ],
+        "expected": "reachable",
+        "outcome": "CORRECT",
+        "package": "pbkdf2",
+        "runtimeUseImplied": false
+      },
+      {
+        "claims": [
+          {
+            "pointer": "/components/7/properties/3/value",
+            "value": "reachable"
+          }
+        ],
+        "componentPointers": [
+          "/components/7"
+        ],
+        "expected": "reachable",
+        "outcome": "CORRECT",
+        "package": "blake2",
+        "runtimeUseImplied": false
+      }
+    ],
+    "parameters": [
+      {
+        "expected": 16,
+        "field": "outputBytes",
+        "reported": [
+          "16"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A02",
+        "status": "CORRECT"
+      },
+      {
+        "expected": "unkeyed",
+        "field": "mode",
+        "reported": [
+          "unkeyed"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A03",
+        "status": "CORRECT"
+      },
+      {
+        "expected": 19,
+        "field": "version",
+        "reported": [
+          "19"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A09",
+        "status": "CORRECT"
+      },
+      {
+        "expected": 32,
+        "field": "outputBytes",
+        "reported": [
+          "32"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A09",
+        "status": "CORRECT"
+      },
+      {
+        "expected": 19,
+        "field": "version",
+        "reported": [
+          "19"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A10",
+        "status": "CORRECT"
+      },
+      {
+        "expected": 32,
+        "field": "outputBytes",
+        "reported": [
+          "32"
+        ],
+        "scope": "COMPONENT_AGGREGATE",
+        "site": "A10",
+        "status": "CORRECT"
+      }
+    ],
+    "runtimeUseImplied": false,
+    "scopeNote": "FOLDED_INTERNALS_NOT_DIRECT_DEPENDENCY_SITE_COVERAGE",
+    "status": "PASS",
+    "supplementalSchema": {
+      "cryptoSchemaSource": "https://cyclonedx.org/schema/cryptography-defs.schema.json",
+      "diagnostics": [],
+      "pinnedProductionProfileChanged": false,
+      "registryDataLastUpdated": "2026-02-24T00:00:00Z",
+      "registryDataSha256": "86cad42c3efb18caac241025696d5a7d08adffa472fbc35934f7b105d1b11550",
+      "registrySource": "https://cyclonedx.org/schema/cryptography-defs.json",
+      "schemaResolution": "OFFLINE_NO_RETRIEVAL",
+      "schemas": {
+        "bom-1.7.schema.json": "df472ef4aaf593904c479293723a1a5c191d6672715c93b3c0b5c318f3914221",
+        "cryptography-defs.schema.json": "95897594e42f7229523fd7a03272da284e0591b1c49550a8b62a355df6357249",
+        "jsf-0.82.schema.json": "8bae002c25e723db7ee1f26afde680ae1a2b1a8f6b4b4b0fd65dc3becb090aae",
+        "spdx.schema.json": "54a6288292bc6c90b0d3952f5f939f17436fa76704ffe68a46e5b78539c7cc1b"
+      },
+      "scope": "SAME_PINNED_1_7_ROOT_WITH_SEPARATELY_SNAPSHOTTED_CURRENT_CRYPTO_REGISTRY_SCHEMA",
+      "status": "VALID"
+    },
+    "tlsBuilder": "CONFIGURATION_NOT_CONNECTION",
+    "unexpectedDifferences": []
+  }
+}

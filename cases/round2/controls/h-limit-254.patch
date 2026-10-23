@@ -1,0 +1,11 @@
+--- a/src/lib.rs
++++ b/src/lib.rs
+@@ -233,7 +233,7 @@
+         let mut prev: Option<Output<H>> = None;
+ 
+         let chunk_len = <H as OutputSizeUser>::OutputSize::USIZE;
+-        if okm.len() > chunk_len * 255 {
++        if okm.len() > chunk_len * 254 {
+             return Err(InvalidLength);
+         }
+ 

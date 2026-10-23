@@ -1,0 +1,21 @@
+{
+  "kind": "SELECTED_SOURCE_LABELS_NOT_ORIGINAL_FROZEN_FILE",
+  "originalFrozenLabelsSha256": "dd3605f015d73ce754a43b191319c10b680fb49e4b30c84991af1c8362922c33",
+  "originalVariantLabelsSha256": "9e2d71ef5b6cdd98edb45fd9fa48a4ee01a491ed255408016edd33f02ee60dce",
+  "publicationVersion": "1.0.0",
+  "selectedTopLevelFields": [
+    "applicationCallSites",
+    "dependencyOperationSites",
+    "dependencyInitializationSites",
+    "configuredCandidates",
+    "supportingEvidence",
+    "reviewedBoundaries",
+    "openBoundaries",
+    "sourceSha256",
+    "lockSha256",
+    "upstreamCommit"
+  ],
+  "upstreamCommit": "6a646353e4fbd9d64fa115176241d7a233e19630",
+  "valuesInSelectedFieldsChanged": false,
+  "variantsUnchanged": true
+}

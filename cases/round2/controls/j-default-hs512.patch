@@ -1,0 +1,11 @@
+--- a/src/cli_config.rs
++++ b/src/cli_config.rs
+@@ -41,7 +41,7 @@
+     /// the algorithm to use for signing the JWT
+     #[clap(long = "alg", short = 'A')]
+     #[clap(value_enum)]
+-    #[clap(default_value = "HS256")]
++    #[clap(default_value = "HS512")]
+     pub algorithm: SupportedAlgorithms,
+ 
+     /// the kid to place in the header

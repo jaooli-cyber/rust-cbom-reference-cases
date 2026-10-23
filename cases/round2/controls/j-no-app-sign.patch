@@ -1,0 +1,11 @@
+--- a/src/translators/encode.rs
++++ b/src/translators/encode.rs
+@@ -123,7 +123,7 @@
+     };
+ 
+     encoding_key_from_secret(&algorithm, &arguments.secret).and_then(|secret| {
+-        encode(&header, &claims, &secret).map_err(jsonwebtoken::errors::Error::into)
++        Ok(String::from("control-no-signature"))
+     })
+ }
+ 
